@@ -54,8 +54,7 @@ To investigate this, I will conduct a cross-sectional study of the 2017 SEA resu
 ```{r, echo=FALSE, message=FALSE}
 library(tidyverse)
 library(readxl)
-setwd("C:/Users/goodi/OneDrive - PennO365/UPenn classes/Senior Springgg/PSCI 3200/Project")
-dat <- read_excel("data2017.xlsx")
+dat <- read_excel("data/data2017.xlsx")
 data.frame(head(dat))
 ```
 
