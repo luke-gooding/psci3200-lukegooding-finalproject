@@ -62,7 +62,7 @@ I will also add columns that identify the types of schools, whether religious bo
 
 ```{r, echo=FALSE, message=FALSE}
 # data with new assignments
-dat_n <- read_excel("masterdata_new_assignment.xlsx")
+dat_n <- read_excel("data/masterdata_new_assignment.xlsx")
 
 # prestige schools codes
 prestige <- as.numeric(unique(dat_n$sec_no20list))
