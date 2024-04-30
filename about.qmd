@@ -2,9 +2,7 @@
 title: "Appendix"
 ---
 
-## Appendix
-
-### Assignment Algorithm
+## Assignment Algorithm
 
 -   The number of school slots at each school is predetermined based on capacity constraints.
 -   Students are tentatively placed in the applicant pools for their first-choice schools and are ranked in descending order by SEA score within each application pool.
@@ -12,3 +10,13 @@ title: "Appendix"
 -   The top-ranked school's slots and the admitted students are removed from the process, and the second choice becomes the new first choice for students who had the top-ranked school as their first choice but did not gain admission.
 -   The process repeats in another round to assign students to the second highest ranked school j2 and determine the cutoff score for the second-ranked school.
 -   The process repeats in subsequent rounds until all slots are filled.
+
+## Omitted covariates
+
+### Community
+I chose to omit community as a control. Initially, I envisioned community as a confounder:
+```{r, echo=FALSE, message=FALSE}
+library(igraph)
+
+```
+
