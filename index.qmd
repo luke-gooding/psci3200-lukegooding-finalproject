@@ -50,11 +50,12 @@ With such high stakes, the 20% list is a powerful tool. While its purpose is to 
 
 To investigate this, I will conduct a cross-sectional study of the 2017 SEA results and assignment data. This data contains the students' primary school, 4 ranked choices of secondary schools, SEA scores and assigned secondary school and was provided to me by the Catholic Education Board.
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(readxl)
+library(gt)
 dat <- read_excel("data/data2017.xlsx")
-data.frame(head(dat))
+gt(data.frame(head(dat)))
 ```
 
 I will also add columns that identify the types of schools, whether religious boards, the government or private institutions manage the school. This data will be scraped from Trinidad and Tobago's Ministry of Education website that contains a list of all the schools in Trinidad and Tobago and their corresponding type [@noauthor_ministry_nodate]. I will then recreate the assignment algorithm (Appendix) that places primary school students into secondary schools to generate a new dataset where students are placed into secondary schools without the use of the 20% list.
