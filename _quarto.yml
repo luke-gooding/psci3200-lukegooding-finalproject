@@ -9,7 +9,9 @@ website:
       - href: index.qmd
         text: Project
       - href: about.qmd
-        text: Nothing really
+        text: Appendix
+        
+bibliography: bib.bib
 
 format:
   html:
