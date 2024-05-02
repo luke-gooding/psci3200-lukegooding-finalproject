@@ -46,11 +46,16 @@ The existence of 'prestige schools' has many effects on individuals navigating t
 
 With such high stakes, the 20% list is a powerful tool. While its purpose is to allow principals to hand pick students who share the same religion and values as their institution, many have claimed that the 20% list is a tool to allow students of wealthy families to gain admittance to 'prestige schools'. I am interested in whether or not the 20% list benefits wealthier families and generates inequality. 
 
-I hypothesize that there is a significant relationship between the existence of the 20% list and rate of admittance of students from wealthy families to 'prestige' secondary schools. Given that I do not have granular data of students' family income, I think private primary school attendance is a suitable proxy for family wealth because only 8% of students belong to families that are willing to incur the cost of private schools.
+### Hypothesis
+I hypothesize that there is a significant relationship between the existence of the 20% list and rate of admittance of students from wealthy families to 'prestige' secondary schools. More specifically, I think that attending a private primary school increases your likelihood of being admitted to a prestige school. 
+
+Given that I do not have granular data of students' family income, I think private primary school attendance is a suitable proxy for family wealth because only 8% of students belong to families that are willing to incur the cost of private schools.
 
 ## Methodology
 
-To investigate this, I will conduct a cross-sectional study of the 2017 SEA results and assignment data. This data contains the students' primary school, 4 ranked choices of secondary schools, SEA scores and assigned secondary school and was provided to me by the Catholic Education Board.
+To investigate this hypothesis, I will conduct a cross-sectional study of the 2017 SEA results and assignment data. This data contains the students' primary school, 4 ranked choices of secondary schools, SEA scores and assigned secondary school and was provided to me by the Catholic Education Board.
+
+### Data
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -107,6 +112,7 @@ mosaicplot(list20_prestige ~ Private, data = cdat, col = c('lightskyblue2', 'tom
 
 The graph demonstrates that there is a slightly greater proportion of private school students assigned to prestige schools with the 20% list in effect (20% list = 1) compared to the instance where the 20% list is not used (20% list = 0).
 
+### Research Design
 Using private primary school attendance as a proxy for family wealth, I will estimate the strength of the relationship between the 20% list and rate of admittance of students from wealthy families to 'prestige' secondary schools.
 
 I will estimate the effect with an Ordinary Least Squared (OLS) regression. See Appendix for further discussion about omitted controls.
@@ -125,9 +131,9 @@ $b_2$: The effect of the community a student is from on proportion of private sc
 
 $ε_{ij}$: Error term
 
-## Limitations
+## Limitations and Possible Empirical Extensions
 
-There are several limitations and potential confounders in this research design. For example, private school attendance is not the most effective proxy for wealth. Having more accurate wealth data such as family income would be useful for the internal validity of this study.
+There are several limitations in this research design. For example, private school attendance is not the most effective proxy for wealth. Having more accurate wealth data such as family income would be useful for the internal validity of this study.
 
 It would also be useful to test the strength of the relationship at different levels modelled after Jackson's research [@jackson_can_2013]. He uses a different ordering system to rank schools by mean incoming SEA scores. He then makes 3 categories: 1 to 30, 30 through 90 and Above 90 and compares the effect at each level. While my ordering system uses cutoff scores, I can model his categorization to determine if there are different strengths of the relationship between the 20% list and the rate of private school student admissions at the 1 to 10, 10-30 and Above 30 levels.
 

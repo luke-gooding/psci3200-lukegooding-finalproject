@@ -18,5 +18,23 @@ I chose to omit community as a control. Initially, I envisioned community as a c
 ```{r, echo=FALSE, message=FALSE}
 library(igraph)
 
+edges <- c("Community", "Wealth", "Community", "Prestige School", "Wealth", "Prestige School")
+dag <- graph(edges, directed = TRUE)
+
+# coordinates
+layout <- matrix(c(0, 1, -1, 0, 1, 0), ncol = 2, byrow = TRUE)
+
+# plot
+plot(dag, layout = layout, edge.arrow.size = 0.5, vertex.size = 15)
+```
+However, I think Community is a mediator, meaning that it is a part of the causal pathway between wealth and increased likelihood of being assigned to a prestige school. Wealth is more likely to effect the community one lives in as opposed to the reverse. The relationship is more like the following DAG:
+
+```{r, echo=FALSE, message=FALSE}
+edges <- c("Wealth", "Community", "Community", "Prestige School")
+dag <- graph(edges, directed = TRUE)
+
+layout <- matrix(c(0, 0, 1, 1, 2, 0), ncol = 2, byrow = TRUE)
+
+plot(dag, layout = layout, edge.arrow.size = 0.5, vertex.size = 15)
 ```
 
