@@ -15,7 +15,7 @@ title: "Appendix"
 
 ### Community
 I chose to omit community as a control. Initially, I envisioned community as a confounder:
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(igraph)
 
 edges <- c("Community", "Wealth", "Community", "Prestige School", "Wealth", "Prestige School")
