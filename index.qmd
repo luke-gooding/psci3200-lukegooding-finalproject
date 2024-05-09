@@ -18,7 +18,7 @@ editor: source
 
 ## Project History
 
-Trinidad and Tobago earned its independence in 1962. In that transition period from colony to independent state, education was used as a means of post-colonial nation building [@london_educational_1997]. The emerging education system, therefore, emphasized access and quality with the message being that education is central to the economic development of any nation [@london_educational_1997]. The country consequently has a robust and ever expanding public schooling system which, as of 2019, educates 92% of primary school students across 558 institutions and 88% of secondary school students across 199 institutions[@noauthor_education_2021].
+Trinidad and Tobago earned its independence in 1962. In that transition period from colony to independent state, education was used as a means of post-colonial nation building @london_educational_1997. The emerging education system, therefore, emphasized access and quality with the message being that education is central to the economic development of any nation [@london_educational_1997]. The country consequently has a robust and ever expanding public schooling system which, as of 2019, educates 92% of primary school students across 558 institutions and 88% of secondary school students across 199 institutions \[\@noauthor_education_2021\].
 
 Importantly, one of the major stakeholders in Trinidad and Tobago's education system are churches. Before independence, most of the nation's schools were run by various religious boards. Churches owned and managed these schools with autonomy and were allowed to charge enrolled students. With the goal of universal secondary education, the government took over the responsibility of funding these schools, which are now known as government 'assisted' or denominational schools [@london_educational_1997]. They standardized syllabi and exams across all the nation's public schools while allowing these religious boards to maintain administrative responsibility and their religious ethos. This arrangement is codified in The Concordat of 1960 [@noauthor_policy_nodate].
 
@@ -44,10 +44,11 @@ A study conducted by the Inter-American Development Bank shows that there are no
 
 The existence of 'prestige schools' has many effects on individuals navigating the transition process. Failure to get into a 'prestige school' can have negative emotional, social and psychological impact on students and hence the effort to avoid this failure would cause students to experience stress, anxiety and fear [@wreo31474]. Parents also often resort to investing in supplementary tutoring in preparation for the SEA exam [@barrow_supplementary_2012].
 
-With such high stakes, the 20% list is a powerful tool. While its purpose is to allow principals to hand pick students who share the same religion and values as their institution, many have claimed that the 20% list is a tool to allow students of wealthy families to gain admittance to 'prestige schools'. I am interested in whether or not the 20% list benefits wealthier families and generates inequality. 
+With such high stakes, the 20% list is a powerful tool. While its purpose is to allow principals to hand pick students who share the same religion and values as their institution, many have claimed that the 20% list is a tool to allow students of wealthy families to gain admittance to 'prestige schools'. I am interested in whether or not the 20% list benefits wealthier families and generates inequality.
 
 ### Hypothesis
-I hypothesize that there is a significant relationship between the existence of the 20% list and rate of admittance of students from wealthy families to 'prestige' secondary schools. More specifically, I think that attending a private primary school increases your likelihood of being admitted to a prestige school. 
+
+I hypothesize that there is a significant relationship between the existence of the 20% list and rate of admittance of students from wealthy families to 'prestige' secondary schools. More specifically, I think that attending a private primary school increases your likelihood of being admitted to a prestige school.
 
 Given that I do not have granular data of students' family income, I think private primary school attendance is a suitable proxy for family wealth because only 8% of students belong to families that are willing to incur the cost of private schools.
 
@@ -113,6 +114,7 @@ mosaicplot(list20_prestige ~ Private, data = cdat, col = c('lightskyblue2', 'tom
 The graph demonstrates that there is a slightly greater proportion of private school students assigned to prestige schools with the 20% list in effect (20% list = 1) compared to the instance where the 20% list is not used (20% list = 0).
 
 ### Research Design
+
 Using private primary school attendance as a proxy for family wealth, I will estimate the strength of the relationship between the 20% list and rate of admittance of students from wealthy families to 'prestige' secondary schools.
 
 I will estimate the effect with an Ordinary Least Squared (OLS) regression. See Appendix for further discussion about omitted controls.
