@@ -205,10 +205,10 @@ top21to30_m <- c(263,548,678,230,164,578,102,706,12,690)
 top21to30_m_dat <- cdat[cdat$Gender == "M" & (cdat$sec_20list %in% top21to30_m | cdat$sec_no20list %in% top21to30_m), ]
 f <- lm(list20_prestige ~ Private + Composite,data = top21to30_m_dat)
 
-cat(stargazer(a, b, c, d, e, f,
+stargazer(a, b, c, d, e, f,
           type = "html",
           dep.var.labels = "Effect at different levels",
-          column.labels = c("Top 10 F", "Top 10 M", "11-20 F", "11-20 M", "21-30 F", "21-30 M")))
+          column.labels = c("Top 10 F", "Top 10 M", "11-20 F", "11-20 M", "21-30 F", "21-30 M"))
 
 ```
 
