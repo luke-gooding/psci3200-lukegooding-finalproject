@@ -11,7 +11,10 @@ title: "Appendix"
 -   The process repeats in another round to assign students to the second highest ranked school j2 and determine the cutoff score for the second-ranked school.
 -   The process repeats in subsequent rounds until all slots are filled.
 
-## Omitted covariates
+## Controls discussion
+
+### Composite score
+I chose to include composite score as a control because it acts as a confounder in the sense that a higher composite grade increases the chance of being admitted to a prestige school. In order to isolate the effect of attending a private primary school, I intend to control for any factors that could be considered when selecting students for the 20% list such as a student's composite score.
 
 ### Community
 I chose to omit community as a control. Initially, I envisioned community as a confounder:

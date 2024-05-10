@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luke Gooding">
-<meta name="dcterms.date" content="2024-05-09">
+<meta name="dcterms.date" content="2024-05-10">
 
 <title>psci3200-lukegooding-finalproject - Project Proposal</title>
 <style>
@@ -20,6 +20,40 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
+}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 
 div.csl-bib-body { }
@@ -4823,16 +4857,19 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-history" id="toc-project-history" class="nav-link active" data-scroll-target="#project-history">Project History</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
-  <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis">Hypothesis</a></li>
+  <li><a href="#theory-and-hypothesis" id="toc-theory-and-hypothesis" class="nav-link" data-scroll-target="#theory-and-hypothesis">Theory and Hypothesis</a></li>
+  <li><a href="#empirical-extension" id="toc-empirical-extension" class="nav-link" data-scroll-target="#empirical-extension">Empirical Extension</a></li>
   </ul></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a>
+  <li><a href="#research-design" id="toc-research-design" class="nav-link" data-scroll-target="#research-design">Research Design</a>
   <ul class="collapse">
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#research-design" id="toc-research-design" class="nav-link" data-scroll-target="#research-design">Research Design</a></li>
+  <li><a href="#regression-models" id="toc-regression-models" class="nav-link" data-scroll-target="#regression-models">Regression Models</a></li>
   </ul></li>
-  <li><a href="#limitations-and-possible-empirical-extensions" id="toc-limitations-and-possible-empirical-extensions" class="nav-link" data-scroll-target="#limitations-and-possible-empirical-extensions">Limitations and Possible Empirical Extensions</a></li>
+  <li><a href="#findings" id="toc-findings" class="nav-link" data-scroll-target="#findings">Findings</a></li>
+  <li><a href="#empirical-extensions" id="toc-empirical-extensions" class="nav-link" data-scroll-target="#empirical-extensions">Empirical extensions</a></li>
+  <li><a href="#discussion-and-conclusion" id="toc-discussion-and-conclusion" class="nav-link" data-scroll-target="#discussion-and-conclusion">Discussion and Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -4865,7 +4902,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 9, 2024</p>
+      <p class="date">May 10, 2024</p>
     </div>
   </div>
   
@@ -4877,9 +4914,9 @@ window.Quarto = {
 </header>
 
 
-<section id="project-history" class="level2">
-<h2 class="anchored" data-anchor-id="project-history">Project History</h2>
-<p>Trinidad and Tobago earned its independence in 1962. In that transition period from colony to independent state, education was used as a means of post-colonial nation building <span class="citation" data-cites="london_educational_1997">London (<a href="#ref-london_educational_1997" role="doc-biblioref">1997</a>)</span>. The emerging education system, therefore, emphasized access and quality with the message being that education is central to the economic development of any nation <span class="citation" data-cites="london_educational_1997">(<a href="#ref-london_educational_1997" role="doc-biblioref">London 1997</a>)</span>. The country consequently has a robust and ever expanding public schooling system which, as of 2019, educates 92% of primary school students across 558 institutions and 88% of secondary school students across 199 institutions [@noauthor_education_2021].</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Trinidad and Tobago earned its independence in 1962. In that transition period from colony to independent state, education was used as a means of post-colonial nation building <span class="citation" data-cites="london_educational_1997">(<a href="#ref-london_educational_1997" role="doc-biblioref">London 1997</a>)</span>. The emerging education system, therefore, emphasized access and quality with the message being that education is central to the economic development of any nation <span class="citation" data-cites="london_educational_1997">(<a href="#ref-london_educational_1997" role="doc-biblioref">London 1997</a>)</span>. The country consequently has a robust and ever expanding public schooling system which, as of 2019, educates 92% of primary school students across 558 institutions and 88% of secondary school students across 199 institutions <span class="citation" data-cites="noauthor_education_2021">(<a href="#ref-noauthor_education_2021" role="doc-biblioref"><span>“Education <span>Statistics</span> - <span>Central</span> <span>Statistical</span> <span>Office</span>”</span> 2021</a>)</span>.</p>
 <p>Importantly, one of the major stakeholders in Trinidad and Tobago’s education system are churches. Before independence, most of the nation’s schools were run by various religious boards. Churches owned and managed these schools with autonomy and were allowed to charge enrolled students. With the goal of universal secondary education, the government took over the responsibility of funding these schools, which are now known as government ‘assisted’ or denominational schools <span class="citation" data-cites="london_educational_1997">(<a href="#ref-london_educational_1997" role="doc-biblioref">London 1997</a>)</span>. They standardized syllabi and exams across all the nation’s public schools while allowing these religious boards to maintain administrative responsibility and their religious ethos. This arrangement is codified in The Concordat of 1960 <span class="citation" data-cites="noauthor_policy_nodate">(<a href="#ref-noauthor_policy_nodate" role="doc-biblioref"><span>“Policy <span>Documents</span> – <span>Ministry</span> of <span>Education</span>”</span> n.d.</a>)</span>.</p>
 <p>Having a publicly funded school system requires the government to assign graduating Primary School students to Secondary Schools. I refer to this process of assignment as the transition process. First, students choose 4 secondary schools they want to attend and rank them. Then, they do the Secondary Entrance Assessment (SEA). Based on their performance on the exam, they are placed into one of their 4 choices using an assignment algorithm (Appendix). If they perform poorly, they will be assigned to a school near to where they live.</p>
 <p>However, according to the Concordat, denominational secondary schools have a special privilege:</p>
@@ -4891,35 +4928,41 @@ window.Quarto = {
 <p>These schools also tend to be government assisted schools with the 20% list privilege. It then begs the question how this 20% list is used today. Remember, these churches went from having control over 100% of their incoming students in a time when secondary education was expensive but in low demand to now only controlling 20% of their incoming students in a time when secondary education is free but in high demand.</p>
 <p>Unfortunately, there are not many studies identifying and focusing on ‘prestige schools’ in particular. C. Karibo Jackson, looked at a special subset of ‘selective schools’. He showed that attending schools with higher-achieving peers increases academic performance and that short-run increases in peer achievement improve outcomes only at high-achieving selective schools<span class="citation" data-cites="jackson_can_2013">(<a href="#ref-jackson_can_2013" role="doc-biblioref">Jackson 2013</a>)</span>.</p>
 <p>A study conducted by the Inter-American Development Bank shows that there are no meaningful differences between the academic outcomes of government versus government assisted secondary schools between the ages of 10 and 15 in terms of dropout rates or examination performance at age 15 in Trinidad and Tobago <span class="citation" data-cites="beuermann_privately_2015">(<a href="#ref-beuermann_privately_2015" role="doc-biblioref">Beuermann, Jackson, and Sierra 2015</a>)</span>. This is despite the study also noting large differences in teacher and peer quality between school types. The research made no mention of ‘prestige schools’ which I theorize is an outlying subset of government assisted schools.</p>
+<section id="theory-and-hypothesis" class="level3">
+<h3 class="anchored" data-anchor-id="theory-and-hypothesis">Theory and Hypothesis</h3>
 <p>The existence of ‘prestige schools’ has many effects on individuals navigating the transition process. Failure to get into a ‘prestige school’ can have negative emotional, social and psychological impact on students and hence the effort to avoid this failure would cause students to experience stress, anxiety and fear <span class="citation" data-cites="wreo31474">(<a href="#ref-wreo31474" role="doc-biblioref">Cunningham 2021</a>)</span>. Parents also often resort to investing in supplementary tutoring in preparation for the SEA exam <span class="citation" data-cites="barrow_supplementary_2012">(<a href="#ref-barrow_supplementary_2012" role="doc-biblioref">Barrow and Lochan 2012</a>)</span>.</p>
 <p>With such high stakes, the 20% list is a powerful tool. While its purpose is to allow principals to hand pick students who share the same religion and values as their institution, many have claimed that the 20% list is a tool to allow students of wealthy families to gain admittance to ‘prestige schools’. I am interested in whether or not the 20% list benefits wealthier families and generates inequality.</p>
-<section id="hypothesis" class="level3">
-<h3 class="anchored" data-anchor-id="hypothesis">Hypothesis</h3>
 <p>I hypothesize that there is a significant relationship between the existence of the 20% list and rate of admittance of students from wealthy families to ‘prestige’ secondary schools. More specifically, I think that attending a private primary school increases your likelihood of being admitted to a prestige school.</p>
 <p>Given that I do not have granular data of students’ family income, I think private primary school attendance is a suitable proxy for family wealth because only 8% of students belong to families that are willing to incur the cost of private schools.</p>
 </section>
+<section id="empirical-extension" class="level3">
+<h3 class="anchored" data-anchor-id="empirical-extension">Empirical Extension</h3>
+<p>I will also test the strength of the relationship in question at different levels modelled after Jackson’s research <span class="citation" data-cites="jackson_can_2013">(<a href="#ref-jackson_can_2013" role="doc-biblioref">Jackson 2013</a>)</span>. He uses a different ordering system to rank schools by mean incoming SEA scores. He then makes 3 categories: 1 to 30, 30 through 90 and Above 90 and compares the effect at each level. While my ordering system uses cutoff scores, I can model his categorization to determine if there are different strengths of the relationship between the 20% list and the rate of private school student admissions at the 1 to 10, 11-20 and 21-30 levels.</p>
+<p>Ranking schools based on cutoff scores is a useful index for competitiveness of a school for two reasons. Firstly, in order for a school to have a cutoff score, there must be more students who choose the school as their first choice than there are spots available. Secondly, higher cutoff scores means higher performing, more competitive students.</p>
+<p>These regressions will aid in addressing heterogeneity in my research question. It is entirely plausible that attending a private primary school has varying effects depending on how competitive a school is.</p>
 </section>
-<section id="methodology" class="level2">
-<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+</section>
+<section id="research-design" class="level2">
+<h2 class="anchored" data-anchor-id="research-design">Research Design</h2>
 <p>To investigate this hypothesis, I will conduct a cross-sectional study of the 2017 SEA results and assignment data. This data contains the students’ primary school, 4 ranked choices of secondary schools, SEA scores and assigned secondary school and was provided to me by the Catholic Education Board.</p>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
 <div class="cell">
 <div class="cell-output-display">
-<div id="zicstntywy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zicstntywy table {
+<div id="ikrixptqfo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ikrixptqfo table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#zicstntywy thead, #zicstntywy tbody, #zicstntywy tfoot, #zicstntywy tr, #zicstntywy td, #zicstntywy th {
+#ikrixptqfo thead, #ikrixptqfo tbody, #ikrixptqfo tfoot, #ikrixptqfo tr, #ikrixptqfo td, #ikrixptqfo th {
 border-style: none;
 }
-#zicstntywy p {
+#ikrixptqfo p {
 margin: 0;
 padding: 0;
 }
-#zicstntywy .gt_table {
+#ikrixptqfo .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -4944,11 +4987,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#zicstntywy .gt_caption {
+#ikrixptqfo .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#zicstntywy .gt_title {
+#ikrixptqfo .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -4959,7 +5002,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#zicstntywy .gt_subtitle {
+#ikrixptqfo .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -4970,7 +5013,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#zicstntywy .gt_heading {
+#ikrixptqfo .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -4981,12 +5024,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#zicstntywy .gt_bottom_border {
+#ikrixptqfo .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#zicstntywy .gt_col_headings {
+#ikrixptqfo .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -5000,7 +5043,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#zicstntywy .gt_col_heading {
+#ikrixptqfo .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5019,7 +5062,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#zicstntywy .gt_column_spanner_outer {
+#ikrixptqfo .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5030,13 +5073,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#zicstntywy .gt_column_spanner_outer:first-child {
+#ikrixptqfo .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#zicstntywy .gt_column_spanner_outer:last-child {
+#ikrixptqfo .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#zicstntywy .gt_column_spanner {
+#ikrixptqfo .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -5047,10 +5090,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#zicstntywy .gt_spanner_row {
+#ikrixptqfo .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#zicstntywy .gt_group_heading {
+#ikrixptqfo .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5075,7 +5118,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#zicstntywy .gt_empty_group_heading {
+#ikrixptqfo .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -5089,13 +5132,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#zicstntywy .gt_from_md > :first-child {
+#ikrixptqfo .gt_from_md > :first-child {
 margin-top: 0;
 }
-#zicstntywy .gt_from_md > :last-child {
+#ikrixptqfo .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#zicstntywy .gt_row {
+#ikrixptqfo .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5113,7 +5156,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#zicstntywy .gt_stub {
+#ikrixptqfo .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5125,7 +5168,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#zicstntywy .gt_stub_row_group {
+#ikrixptqfo .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5138,13 +5181,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#zicstntywy .gt_row_group_first td {
+#ikrixptqfo .gt_row_group_first td {
 border-top-width: 2px;
 }
-#zicstntywy .gt_row_group_first th {
+#ikrixptqfo .gt_row_group_first th {
 border-top-width: 2px;
 }
-#zicstntywy .gt_summary_row {
+#ikrixptqfo .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -5153,14 +5196,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#zicstntywy .gt_first_summary_row {
+#ikrixptqfo .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#zicstntywy .gt_first_summary_row.thick {
+#ikrixptqfo .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#zicstntywy .gt_last_summary_row {
+#ikrixptqfo .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5169,7 +5212,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#zicstntywy .gt_grand_summary_row {
+#ikrixptqfo .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -5178,7 +5221,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#zicstntywy .gt_first_grand_summary_row {
+#ikrixptqfo .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5187,7 +5230,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#zicstntywy .gt_last_grand_summary_row_top {
+#ikrixptqfo .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5196,10 +5239,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#zicstntywy .gt_striped {
+#ikrixptqfo .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#zicstntywy .gt_table_body {
+#ikrixptqfo .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -5207,7 +5250,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#zicstntywy .gt_footnotes {
+#ikrixptqfo .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -5220,7 +5263,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#zicstntywy .gt_footnote {
+#ikrixptqfo .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -5228,7 +5271,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#zicstntywy .gt_sourcenotes {
+#ikrixptqfo .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -5241,57 +5284,57 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#zicstntywy .gt_sourcenote {
+#ikrixptqfo .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#zicstntywy .gt_left {
+#ikrixptqfo .gt_left {
 text-align: left;
 }
-#zicstntywy .gt_center {
+#ikrixptqfo .gt_center {
 text-align: center;
 }
-#zicstntywy .gt_right {
+#ikrixptqfo .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#zicstntywy .gt_font_normal {
+#ikrixptqfo .gt_font_normal {
 font-weight: normal;
 }
-#zicstntywy .gt_font_bold {
+#ikrixptqfo .gt_font_bold {
 font-weight: bold;
 }
-#zicstntywy .gt_font_italic {
+#ikrixptqfo .gt_font_italic {
 font-style: italic;
 }
-#zicstntywy .gt_super {
+#ikrixptqfo .gt_super {
 font-size: 65%;
 }
-#zicstntywy .gt_footnote_marks {
+#ikrixptqfo .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#zicstntywy .gt_asterisk {
+#ikrixptqfo .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#zicstntywy .gt_indent_1 {
+#ikrixptqfo .gt_indent_1 {
 text-indent: 5px;
 }
-#zicstntywy .gt_indent_2 {
+#ikrixptqfo .gt_indent_2 {
 text-indent: 10px;
 }
-#zicstntywy .gt_indent_3 {
+#ikrixptqfo .gt_indent_3 {
 text-indent: 15px;
 }
-#zicstntywy .gt_indent_4 {
+#ikrixptqfo .gt_indent_4 {
 text-indent: 20px;
 }
-#zicstntywy .gt_indent_5 {
+#ikrixptqfo .gt_indent_5 {
 text-indent: 25px;
 }
 </style>
@@ -5419,36 +5462,548 @@ text-indent: 25px;
 </div>
 </div>
 <p>I will also add columns that identify the types of schools, whether religious boards, the government or private institutions manage the school. This data will be scraped from Trinidad and Tobago’s Ministry of Education website that contains a list of all the schools in Trinidad and Tobago and their corresponding type <span class="citation" data-cites="noauthor_ministry_nodate">(<a href="#ref-noauthor_ministry_nodate" role="doc-biblioref"><span>“Ministry of <span>Education</span> – <span>MOE</span> <span>Access</span>: <span>Service</span>, <span>Systems</span> &amp; <span>Solutions</span>”</span> n.d.</a>)</span>. I then recreated the assignment algorithm (See Appendix) that places primary school students into secondary schools to generate a new dataset where students are placed into secondary schools without the use of the 20% list.</p>
+<p>In addition to this dataset, I will use another dataset from the Ministry of Education that contains cutoff scores for all secondary schools in 2017.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cutoffs <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/cutoff_2017.xlsx&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(<span class="fu">data.frame</span>(<span class="fu">head</span>(cutoffs)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="uqxfulriin" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uqxfulriin table {
+font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+#uqxfulriin thead, #uqxfulriin tbody, #uqxfulriin tfoot, #uqxfulriin tr, #uqxfulriin td, #uqxfulriin th {
+border-style: none;
+}
+#uqxfulriin p {
+margin: 0;
+padding: 0;
+}
+#uqxfulriin .gt_table {
+display: table;
+border-collapse: collapse;
+line-height: normal;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}
+#uqxfulriin .gt_caption {
+padding-top: 4px;
+padding-bottom: 4px;
+}
+#uqxfulriin .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}
+#uqxfulriin .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 3px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}
+#uqxfulriin .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#uqxfulriin .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#uqxfulriin .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#uqxfulriin .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}
+#uqxfulriin .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}
+#uqxfulriin .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}
+#uqxfulriin .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}
+#uqxfulriin .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}
+#uqxfulriin .gt_spanner_row {
+border-bottom-style: hidden;
+}
+#uqxfulriin .gt_group_heading {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+text-align: left;
+}
+#uqxfulriin .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}
+#uqxfulriin .gt_from_md > :first-child {
+margin-top: 0;
+}
+#uqxfulriin .gt_from_md > :last-child {
+margin-bottom: 0;
+}
+#uqxfulriin .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}
+#uqxfulriin .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+}
+#uqxfulriin .gt_stub_row_group {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+vertical-align: top;
+}
+#uqxfulriin .gt_row_group_first td {
+border-top-width: 2px;
+}
+#uqxfulriin .gt_row_group_first th {
+border-top-width: 2px;
+}
+#uqxfulriin .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#uqxfulriin .gt_first_summary_row {
+border-top-style: solid;
+border-top-color: #D3D3D3;
+}
+#uqxfulriin .gt_first_summary_row.thick {
+border-top-width: 2px;
+}
+#uqxfulriin .gt_last_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#uqxfulriin .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#uqxfulriin .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}
+#uqxfulriin .gt_last_grand_summary_row_top {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: double;
+border-bottom-width: 6px;
+border-bottom-color: #D3D3D3;
+}
+#uqxfulriin .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}
+#uqxfulriin .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#uqxfulriin .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#uqxfulriin .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#uqxfulriin .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#uqxfulriin .gt_sourcenote {
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#uqxfulriin .gt_left {
+text-align: left;
+}
+#uqxfulriin .gt_center {
+text-align: center;
+}
+#uqxfulriin .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}
+#uqxfulriin .gt_font_normal {
+font-weight: normal;
+}
+#uqxfulriin .gt_font_bold {
+font-weight: bold;
+}
+#uqxfulriin .gt_font_italic {
+font-style: italic;
+}
+#uqxfulriin .gt_super {
+font-size: 65%;
+}
+#uqxfulriin .gt_footnote_marks {
+font-size: 75%;
+vertical-align: 0.4em;
+position: initial;
+}
+#uqxfulriin .gt_asterisk {
+font-size: 100%;
+vertical-align: 0;
+}
+#uqxfulriin .gt_indent_1 {
+text-indent: 5px;
+}
+#uqxfulriin .gt_indent_2 {
+text-indent: 10px;
+}
+#uqxfulriin .gt_indent_3 {
+text-indent: 15px;
+}
+#uqxfulriin .gt_indent_4 {
+text-indent: 20px;
+}
+#uqxfulriin .gt_indent_5 {
+text-indent: 25px;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="School.Code" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">School.Code</th>
+<th id="School.Name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">School.Name</th>
+<th id="Male.Cut.Score" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Male.Cut.Score</th>
+<th id="Female.Cut.Score" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Female.Cut.Score</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="School.Code">389</td>
+<td class="gt_row gt_left" headers="School.Name">Naparima College</td>
+<td class="gt_row gt_right" headers="Male.Cut.Score">239.144</td>
+<td class="gt_row gt_right" headers="Female.Cut.Score">NA</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="School.Code">456</td>
+<td class="gt_row gt_left" headers="School.Name">Presentation College, Chaguanas</td>
+<td class="gt_row gt_right" headers="Male.Cut.Score">236.051</td>
+<td class="gt_row gt_right" headers="Female.Cut.Score">NA</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="School.Code">260</td>
+<td class="gt_row gt_left" headers="School.Name">Hillview College</td>
+<td class="gt_row gt_right" headers="Male.Cut.Score">235.870</td>
+<td class="gt_row gt_right" headers="Female.Cut.Score">NA</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="School.Code">457</td>
+<td class="gt_row gt_left" headers="School.Name">Presentation College, San Fernando</td>
+<td class="gt_row gt_right" headers="Male.Cut.Score">234.520</td>
+<td class="gt_row gt_right" headers="Female.Cut.Score">NA</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="School.Code">276</td>
+<td class="gt_row gt_left" headers="School.Name">Iere High</td>
+<td class="gt_row gt_right" headers="Male.Cut.Score">231.432</td>
+<td class="gt_row gt_right" headers="Female.Cut.Score">230.194</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="School.Code">27</td>
+<td class="gt_row gt_left" headers="School.Name">ASJA Boys’ College, San Fernando</td>
+<td class="gt_row gt_right" headers="Male.Cut.Score">231.154</td>
+<td class="gt_row gt_right" headers="Female.Cut.Score">NA</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
 <p>The difference between the original assignments (with 20% list) and my generated assignments (without 20% list) with regards to the proportion of private primary school students in prestige secondary schools is displayed in Graph 1 below:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="data:image/png;base64,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ASIJKECkHANakTFbnKr9bnAM12ZBDufYm5a0bHGqa1PQ67IcB1RVgWy1B/TYS0XHBDQd45QzASUIaErGKWcCShDQlIxTzgSUIKApGaecCShBQFMyTjkTUIKApmScciagBAFNyTjlTEAJApqSccqZgBIENCXjlDMBJQhoSsYpZwJKENCUjFPOBJQgoCkZp5wJKEFAUzJOORNQgoCmZJxyJqAEAU3JOOVMQAkCmpJxypmAEgQ0JeOUMwElCGhKxilnAkoQ0JSMU84ElCCgKRmnnAkoQUBTMk45E1CCgKZknHImoAQBTck45UxACQKaknHKmYASBDQl45QzASUIaErGKWcCShDQlIxTzgSUIKApGaecCShBQFMyTjkTUIKApmScciagBAFNyTjlTEAJApqSccqZgBIENCXjlDMBJQhoSsYpZwJKENCUjFPOBJQgoCkZp5wJKEFAUzJOORNQgoCmZJxyJqAEAU3JOOVMQAkCmpJxypmAEgQ0JeOUMwElCGhKxilnAkoQ0JSMU84ElCCgKRmnnAkoQUBTMk45E1CCgKZknHImoAQBTck45UxACQKaknHKmYASBDQl45QzASUIaErGKWcCShDQlIxTzgSUIKApGaecCShBQFMyTjkTUIKApmScciagBAFNyTjlTEAJApqSccqZgBIENCXjlDMBJQhoSsYpZwJKENCUjFPOBJQgoCkZp5wJKEFAUzJOORNQgoCmZJxyJqAEAU3JOOVMQAkCmpJxypmAEgQ0JeOUMwElCGhKxilnAkoQ0JSMU84ElCCgKRmnnAkoQUBTMk45E1CCgKZknHImoAQBTck45UxACQKaknHKmYASBDQl45QzASUIaErGKWcCShDQlIxTzgSUIKApGaecCShBQFMyTjkTUIKApmScciagBAFNyTjlTEAJApqSccqZgBIENCXjlDMBJQhoSsYpZwJKENCUjFPOBJQgoCkZp5wJKEFAUzJOORNQgoCmZJxyJqAEAU3JOOVMQAkCmpJxypmAEgQ0JeOUMwElCGhKxilnAkoQ0JSMU84ElCCgKRmnnAkoQUBTMk45E1CCgKZknHImoAQBTck45UxACQKaknHKmYASBDQl45QzASUIaErGKWcCShDQlIxTzgSUIKApGaecCShBQFMyTjkTUIKApmScciagBAFNyTjlTEAJApqSccqZgBIENCXjlDMB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" class="img-fluid figure-img" width="672"></p>
+<p><img src="data:image/png;base64,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" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><em>Graph 1 - This bar graph compares the proportion of students from private primary schools with and without the 20% list in place. 1 represents the affirmative of the axis label, 0 represents the counterfactual.</em></p>
-<p>The graph demonstrates that there is a slightly greater proportion of private school students assigned to prestige schools with the 20% list in effect (20% list = 1) compared to the instance where the 20% list is not used (20% list = 0).</p>
+<p><em>Graph 1 - This bar graph compares the number of students from private primary schools that are assigned to a prestige school with and without the 20% list in place. 1 represents the affirmative of the axis label, 0 represents the counterfactual.</em></p>
+<p>The graph demonstrates that there is a slightly greater number of private school students assigned to prestige schools with the 20% list in effect (20% list = 1) compared to the instance where the 20% list is not used (20% list = 0).</p>
 </section>
-<section id="research-design" class="level3">
-<h3 class="anchored" data-anchor-id="research-design">Research Design</h3>
+<section id="regression-models" class="level3">
+<h3 class="anchored" data-anchor-id="regression-models">Regression Models</h3>
 <p>Using private primary school attendance as a proxy for family wealth, I will estimate the strength of the relationship between the 20% list and rate of admittance of students from wealthy families to ‘prestige’ secondary schools.</p>
-<p>I will estimate the effect with an Ordinary Least Squared (OLS) regression. See Appendix for further discussion about omitted controls.</p>
-<p><span class="math display">\[ 20percentlist_{ij} =b_0 + b_1 (PrivPrestige_{ij}) + ε_i \]</span></p>
+<p>I will estimate the effect with an Ordinary Least Squared (OLS) regression and a control for composite SEA scores (See Appendix for further discussion about controls).</p>
+<p><span class="math display">\[ 20percentlist_{ij} =b_0 + b_1 (PrivPrestige_{ij}) + b_2(Composite_{ij}) +ε_i \]</span></p>
 <p><span class="math inline">\(20percentlist_{ij}\)</span>: Binary variable describing whether a student’s assignment to prestige school j came from the algorithm with the 20% list (1) or without the 20% list (0).</p>
 <p><span class="math inline">\(b_0\)</span>: Intercept</p>
 <p><span class="math inline">\(b_1\)</span>: The effect of the 20% list on the likelihood of a private school student attending a prestige school.</p>
 <p><span class="math inline">\(PrivPrestige_{ij}\)</span>: Binary variable describing whether a student attended a private primary school and got accepted into a prestige school j (1) or not (0).</p>
-<p><span class="math inline">\(b_2\)</span>: The effect of the community a student is from on proportion of private school students in prestige schools.</p>
+<p><span class="math inline">\(b_2\)</span>: The effect of a student’s composite SEA score on the likelihood of being admitted to a prestige school.</p>
+<p><span class="math inline">\(Composite_{ij}\)</span>: Student’s composite SEA score</p>
 <p><span class="math inline">\(ε_{ij}\)</span>: Error term</p>
 </section>
 </section>
-<section id="limitations-and-possible-empirical-extensions" class="level2">
-<h2 class="anchored" data-anchor-id="limitations-and-possible-empirical-extensions">Limitations and Possible Empirical Extensions</h2>
+<section id="findings" class="level2">
+<h2 class="anchored" data-anchor-id="findings">Findings</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Regression Results
+===============================================
+                        Dependent variable:    
+                    ---------------------------
+                        20% list in effect     
+-----------------------------------------------
+Private                       0.026*           
+                              (0.014)          
+                                               
+Composite                    -0.001***         
+                             (0.0004)          
+                                               
+Constant                     0.773***          
+                              (0.094)          
+                                               
+-----------------------------------------------
+Observations                  11,297           
+R2                             0.001           
+Adjusted R2                    0.001           
+Residual Std. Error     0.500 (df = 11294)     
+F Statistic          5.140*** (df = 2; 11294)  
+===============================================
+Note:               *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01</code></pre>
+</div>
+</div>
+</section>
+<section id="empirical-extensions" class="level2">
+<h2 class="anchored" data-anchor-id="empirical-extensions">Empirical extensions</h2>
+<p>EXPLAIN!!! Heterogeneity</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+&lt;table style=&quot;text-align:center&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot;&gt;&lt;em&gt;Dependent variable:&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot;&gt;Effect at different levels&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;Top 10 F&lt;/td&gt;&lt;td&gt;Top 10 M&lt;/td&gt;&lt;td&gt;11-20 F&lt;/td&gt;&lt;td&gt;11-20 M&lt;/td&gt;&lt;td&gt;21-30 F&lt;/td&gt;&lt;td&gt;21-30 M&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(1)&lt;/td&gt;&lt;td&gt;(2)&lt;/td&gt;&lt;td&gt;(3)&lt;/td&gt;&lt;td&gt;(4)&lt;/td&gt;&lt;td&gt;(5)&lt;/td&gt;&lt;td&gt;(6)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Private&lt;/td&gt;&lt;td&gt;0.032&lt;/td&gt;&lt;td&gt;0.033&lt;/td&gt;&lt;td&gt;0.049&lt;/td&gt;&lt;td&gt;-0.014&lt;/td&gt;&lt;td&gt;-0.045&lt;/td&gt;&lt;td&gt;0.090&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(0.026)&lt;/td&gt;&lt;td&gt;(0.028)&lt;/td&gt;&lt;td&gt;(0.044)&lt;/td&gt;&lt;td&gt;(0.039)&lt;/td&gt;&lt;td&gt;(0.044)&lt;/td&gt;&lt;td&gt;(0.058)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Composite&lt;/td&gt;&lt;td&gt;-0.010&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;-0.008&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;-0.006&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;-0.004&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;0.005&lt;sup&gt;**&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;0.004&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(0.002)&lt;/td&gt;&lt;td&gt;(0.002)&lt;/td&gt;&lt;td&gt;(0.002)&lt;/td&gt;&lt;td&gt;(0.002)&lt;/td&gt;&lt;td&gt;(0.002)&lt;/td&gt;&lt;td&gt;(0.001)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Constant&lt;/td&gt;&lt;td&gt;2.964&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;2.376&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;1.787&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;1.528&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;-0.708&lt;/td&gt;&lt;td&gt;-0.306&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(0.399)&lt;/td&gt;&lt;td&gt;(0.359)&lt;/td&gt;&lt;td&gt;(0.367)&lt;/td&gt;&lt;td&gt;(0.373)&lt;/td&gt;&lt;td&gt;(0.544)&lt;/td&gt;&lt;td&gt;(0.283)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Observations&lt;/td&gt;&lt;td&gt;2,162&lt;/td&gt;&lt;td&gt;1,858&lt;/td&gt;&lt;td&gt;1,712&lt;/td&gt;&lt;td&gt;1,456&lt;/td&gt;&lt;td&gt;1,280&lt;/td&gt;&lt;td&gt;1,184&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;0.019&lt;/td&gt;&lt;td&gt;0.015&lt;/td&gt;&lt;td&gt;0.008&lt;/td&gt;&lt;td&gt;0.005&lt;/td&gt;&lt;td&gt;0.005&lt;/td&gt;&lt;td&gt;0.009&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Adjusted R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;0.018&lt;/td&gt;&lt;td&gt;0.014&lt;/td&gt;&lt;td&gt;0.007&lt;/td&gt;&lt;td&gt;0.004&lt;/td&gt;&lt;td&gt;0.003&lt;/td&gt;&lt;td&gt;0.007&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Residual Std. Error&lt;/td&gt;&lt;td&gt;0.496 (df = 2159)&lt;/td&gt;&lt;td&gt;0.497 (df = 1855)&lt;/td&gt;&lt;td&gt;0.498 (df = 1709)&lt;/td&gt;&lt;td&gt;0.499 (df = 1453)&lt;/td&gt;&lt;td&gt;0.499 (df = 1277)&lt;/td&gt;&lt;td&gt;0.498 (df = 1181)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;F Statistic&lt;/td&gt;&lt;td&gt;20.512&lt;sup&gt;***&lt;/sup&gt; (df = 2; 2159)&lt;/td&gt;&lt;td&gt;14.403&lt;sup&gt;***&lt;/sup&gt; (df = 2; 1855)&lt;/td&gt;&lt;td&gt;6.671&lt;sup&gt;***&lt;/sup&gt; (df = 2; 1709)&lt;/td&gt;&lt;td&gt;3.797&lt;sup&gt;**&lt;/sup&gt; (df = 2; 1453)&lt;/td&gt;&lt;td&gt;2.967&lt;sup&gt;*&lt;/sup&gt; (df = 2; 1277)&lt;/td&gt;&lt;td&gt;5.371&lt;sup&gt;***&lt;/sup&gt; (df = 2; 1181)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot; style=&quot;text-align:right&quot;&gt;&lt;sup&gt;*&lt;/sup&gt;p&lt;0.1; &lt;sup&gt;**&lt;/sup&gt;p&lt;0.05; &lt;sup&gt;***&lt;/sup&gt;p&lt;0.01&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<p>Nothing significant. Likely too small of a sample. Schools take in anywhere from 0% - 20%. Looking for very small differences. Not surprised by findings</p>
+</section>
+<section id="discussion-and-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-and-conclusion">Discussion and Conclusion</h2>
 <p>There are several limitations in this research design. For example, private school attendance is not the most effective proxy for wealth. Having more accurate wealth data such as family income would be useful for the internal validity of this study.</p>
-<p>It would also be useful to test the strength of the relationship at different levels modelled after Jackson’s research <span class="citation" data-cites="jackson_can_2013">(<a href="#ref-jackson_can_2013" role="doc-biblioref">Jackson 2013</a>)</span>. He uses a different ordering system to rank schools by mean incoming SEA scores. He then makes 3 categories: 1 to 30, 30 through 90 and Above 90 and compares the effect at each level. While my ordering system uses cutoff scores, I can model his categorization to determine if there are different strengths of the relationship between the 20% list and the rate of private school student admissions at the 1 to 10, 10-30 and Above 30 levels.</p>
 <p>As a robustness check, I could test the strength of the relationship between the 20% list and the proportion of private school students who get into their first-choice schools. First-choice schools are similar to prestige schools in the sense that they are representative of a family’s preferences but they are more subjective. If results are similar, an argument can be made that the relationship is stronger.</p>
 
 
@@ -5464,6 +6019,9 @@ Beuermann, Diether, C. Kirabo Jackson, and Ricardo Sierra. 2015. <span>“Privat
 </div>
 <div id="ref-wreo31474" class="csl-entry" role="listitem">
 Cunningham, Victoria Maria. 2021. <span>“The Impact of High-Stakes Testing: The Experiences of Educators, Students, and Parents in Trinidad and Tobago.”</span> University of Sheffield. <a href="https://etheses.whiterose.ac.uk/31474/">https://etheses.whiterose.ac.uk/31474/</a>.
+</div>
+<div id="ref-noauthor_education_2021" class="csl-entry" role="listitem">
+<span>“Education <span>Statistics</span> - <span>Central</span> <span>Statistical</span> <span>Office</span>.”</span> 2021. <em>Https://Cso.gov.tt/</em>. <a href="https://cso.gov.tt/subjects/population-and-vital-statistics/education-statistics/">https://cso.gov.tt/subjects/population-and-vital-statistics/education-statistics/</a>.
 </div>
 <div id="ref-jackson_can_2013" class="csl-entry" role="listitem">
 Jackson, C. Kirabo. 2013. <span>“Can Higher-Achieving Peers Explain the Benefits to Attending Selective Schools? <span>Evidence</span> from <span>Trinidad</span> and <span>Tobago</span>.”</span> <em>Journal of Public Economics</em> 108: 63–77. https://doi.org/<a href="https://doi.org/10.1016/j.jpubeco.2013.09.007">https://doi.org/10.1016/j.jpubeco.2013.09.007</a>.
