@@ -1,5 +1,10 @@
 ---
 title: "Appendix"
+
+format:
+  html:
+    self-contained: TRUE
+    code-fold: TRUE
 ---
 
 ## Assignment Algorithm
@@ -42,20 +47,8 @@ plot(dag, layout = layout, edge.arrow.size = 0.5, vertex.size = 15)
 ```
 
 ## Useful Visualization
-```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
-df = read_excel("data/masterdata1.xlsx")
 
-ggplot(dat, 
-       aes(x= AverageCompositeScore, 
-           y= FirstChoicepercent,
-           color = SchoolType)) +
-  geom_point(aes(size = TotalStudents) ,alpha=0.5)+
-  scale_size(range = c(.1, 15), name="Number of Students")+
-  scale_fill_viridis(discrete=TRUE, guide=FALSE, option="A") +
-  theme_ipsum() +
-  theme(legend.position="right") +
-  ylab("Proportion Passing for First Choice School") +
-  xlab("Average Composite Score")+
-  theme(legend.position = "none")
-```
+![Graph from a previous project](data/vis.png)
+
+
 
