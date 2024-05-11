@@ -29,7 +29,7 @@ However, according to the Concordat, denominational secondary schools have a spe
 
 *The Principals of Assisted Secondary Schools will make available a minimum of 80 per centum of the First Form entry places to those who, by passing the test, qualify on the results of the Common Entrance Examination for free secondary education...The Principals will be free to allocate up to 20 per centum, the remaining places as they see fit provided normally that the pass list of the Common Entrance Examination serves to provide the pupils. [@noauthor_policy_nodate]*
 
-This part of the Concordat, colloquially known as the '20% list' is the subject of my research. Campbell refers to the Concordat as one of many colonial holdovers present in our education system [@london_educational_1997] that perpetuates elitism. Coloquially, we refer to elite secondary schools as 'prestige schools'.
+This part of the Concordat, colloquially known as the '20% list' is the subject of my research. Campbell @campbell_endless_1997 refers to the Concordat as one of many colonial holdovers present in our education system that perpetuates elitism. Coloquially, we refer to elite secondary schools as 'prestige schools'.
 
 'Prestige schools' are secondary schools that are considered high performing and are usually ranked first in students' 4 choices. Some refer to these schools as 'first choice schools'. To operationalize this term, I have devised a definition:
 
@@ -39,9 +39,19 @@ I can then order schools based on cutoff scores (similar to the way the Assignme
 
 These schools also tend to be government assisted schools with the 20% list privilege. It then begs the question how this 20% list is used today. Remember, these churches went from having control over 100% of their incoming students in a time when secondary education was expensive but in low demand to now only controlling 20% of their incoming students in a time when secondary education is free but in high demand.
 
-Unfortunately, there are not many studies identifying and focusing on 'prestige schools' in particular. C. Karibo Jackson, looked at a special subset of 'selective schools'. He showed that attending schools with higher-achieving peers increases academic performance and that short-run increases in peer achievement improve outcomes only at high-achieving selective schools[@jackson_can_2013].
+Unfortunately, there are not many studies identifying and focusing on 'prestige schools' in particular. Jackson @jackson_can_2013, looked at a special subset of 'selective schools'. He showed that attending schools with higher-achieving peers increases academic performance and that short-run increases in peer achievement improve outcomes only at high-achieving selective schools.
 
 A study conducted by the Inter-American Development Bank shows that there are no meaningful differences between the academic outcomes of government versus government assisted secondary schools between the ages of 10 and 15 in terms of dropout rates or examination performance at age 15 in Trinidad and Tobago [@beuermann_privately_2015]. This is despite the study also noting large differences in teacher and peer quality between school types. The research made no mention of 'prestige schools' which I theorize is an outlying subset of government assisted schools.
+
+This work is intended to inform citizens and policy makers about the mechanisms behind the 20% list. If there is evidence of inequity, whether from this study or others, parents, teachers and policy makers should mobilize to address this issue. 
+
+As Lisle @lisle_when_2009 stated: the future of policy on the use of secondary school entrance examinations lies not in further tinkering or experimentation without evidence, but in developing a robust ongoing monitoring and evaluation system to provide information on examination processes and outcomes.
+
+More broadly, the persistence of the SEA exam and similar 11-plus examinations is the subject of much research:
+
+*One of the best established findings of educational research is that students’ social class and their attainment at school are linked. This is a worldwide phenomenon. Students from more prestigious social class backgrounds or higher-income families tend to obtain higher marks and examination grades, and are then more likely to stay on in any education system that celebrates qualifications over equity.* [@doi:10.1177/2158244018825171]
+
+Worldwide, 11-plus exams have been discredited from both a psychometric and philosophical point of view by education authorities committed to equality of opportunity and non-elitism [@mackenzie_elevenplus_1989]. MacKenzie @mackenzie_elevenplus_1989 posits that the system persists in Trinidad and Tobago as a necessary mechanism to resolve the incredible demand for prestige schools. It is only through the improvement of non-prestige schools and the change in attitude of citizens toward them can the conversation about removing SEA be possible. MacKenzie @mackenzie_elevenplus_1989  suggests that, in the short term, modifications to the SEA examination will go some way to mitigating its deleterious effects. That is what I hope to do with this research project.
 
 ### Theory and Hypothesis
 
@@ -59,7 +69,7 @@ I will also test the strength of the relationship in question at different level
 
 Ranking schools based on cutoff scores is a useful index for competitiveness of a school for two reasons. Firstly, in order for a school to have a cutoff score, there must be more students who choose the school as their first choice than there are spots available. Secondly, higher cutoff scores means higher performing, more competitive students.
 
-These regressions will aid in addressing heterogeneity in my research question. It is entirely plausible that attending a private primary school has varying effects depending on how competitive a school is.
+These regressions will aid in addressing heterogeneity in my research question. It is entirely plausible that attending a private primary school has varying effects depending on how competitive a school is. I will also separate the data into male and female students because cutoff scores are also gendered (see Table 2). This is so because schools are either all-male or all-female and those that are unisex have a set number of seats available for each gender.
 
 ## Research Design
 
@@ -75,18 +85,11 @@ dat <- read_excel("data/data2017.xlsx")
 gt(data.frame(head(dat)))
 ```
 
-I will also add columns that identify the types of schools, whether religious boards, the government or private institutions manage the school. This data will be scraped from Trinidad and Tobago's Ministry of Education website that contains a list of all the schools in Trinidad and Tobago and their corresponding type [@noauthor_ministry_nodate]. I then recreated the assignment algorithm (See Appendix) that places primary school students into secondary schools to generate a new dataset where students are placed into secondary schools without the use of the 20% list.
+*Table 1: Original Dataset from the Catholic Education Board*
 
-In addition to this dataset, I will use another dataset from the Ministry of Education that contains cutoff scores for all secondary schools in 2017.
+I will also add columns that identify the types of schools, whether religious boards, the government or private institutions manage the school. This data will be scraped from Trinidad and Tobago's Ministry of Education website that contains a list of all the schools in Trinidad and Tobago and their corresponding type [@noauthor_ministry_nodate]. I then recreated the assignment algorithm (See Appendix) that places primary school students into secondary schools to generate a new dataset where students are placed into secondary schools without the use of the 20% list. This new dataset can be seen in Table 2 below:
 
-```{r}
-cutoffs <- read_excel("data/cutoff_2017.xlsx")
-gt(data.frame(head(cutoffs)))
-```
-
-The difference between the original assignments (with 20% list) and my generated assignments (without 20% list) with regards to the proportion of private primary school students in prestige secondary schools is displayed in Graph 1 below:
-
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # data with new assignments
 dat_n <- read_excel("data/masterdata_new_assignment.xlsx")
 
@@ -123,26 +126,30 @@ cdat <- cdat %>% pivot_wider(names_from = Pri_sch_TYPE,
                              values_from = x,
                              values_fill = 0)
 
-
-ggplot(cdat) +
-  geom_bar(aes(x=list20_prestige, y=mean(Private)), stat="identity", fill="tomato")+
-  labs(x = "20% list",
-       y = "Private school students",
-       title = "Number of private school students in prestige schools")+
-  scale_x_continuous(breaks=c(0,1))+
-  theme_minimal()
-
+gt(cdat[sample(nrow(cdat), 10), ])
 ```
+*Table 2: 10 random rows from dataset*
 
-*Graph 1 - This bar graph compares the number of students from private primary schools that are assigned to a prestige school with and without the 20% list in place. 1 represents the affirmative of the axis label, 0 represents the counterfactual.*
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(vtable)
+st(cdat, vars = c('Private','sec_20list', 'sec_no20list', 'Composite'))
+```
+*Table 3: Summary table of variables of interest*
 
-The graph demonstrates that there is a slightly greater number of private school students assigned to prestige schools with the 20% list in effect (20% list = 1) compared to the instance where the 20% list is not used (20% list = 0).
+In addition to this dataset, I will use another dataset from the Ministry of Education that contains cutoff scores for all secondary schools in 2017.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+cutoffs <- read_excel("data/cutoff_2017.xlsx")
+gt(data.frame(head(cutoffs)))
+```
+*Table 4: Cutoff Scores 2017*
 
 ### Regression Models
 
-Using private primary school attendance as a proxy for family wealth, I will estimate the strength of the relationship between the 20% list and rate of admittance of students from wealthy families to 'prestige' secondary schools.
+Using private primary school attendance as a proxy for family wealth, I will estimate the strength of the relationship between the 20% list and rate of admittance of students from wealthy families to 'prestige' secondary schools. I chose to include composite score as a control because it acts as a confounder in the sense that a higher composite grade increases the chance of being admitted to a prestige school. In order to isolate the effect of attending a private primary school, I intend to control for any factors that could be considered when selecting students for the 20% list such as a student's composite score. While I did not identify any other variables from my data as cofounders (See Appendix), it is entirely possible that unobserved ones exist. For example, it is plausible that family connections and social network can influence can act as a confounder. Relationships with primary both primary and secondary school faculty can play an important role in which secondary school a student is assigned to. Also, family religion is an important factor in determining which primary school a student attends and it plays a role in the 20% list decision-making process.
 
-I will estimate the effect with an Ordinary Least Squared (OLS) regression and a control for composite SEA scores (See Appendix for further discussion about controls).
+
+Therefore, the model I choose to investigate my hypothesis is an Ordinary Least Squared (OLS) regression with a control for composite SEA scores (See Appendix for further discussion about controls).
 
 $$ 20percentlist_{ij} =b_0 + b_1 (PrivPrestige_{ij}) + b_2(Composite_{ij}) +ε_i $$
 
@@ -162,19 +169,40 @@ $ε_{ij}$: Error term
 
 ## Findings
 
-```{r, echo=FALSE, message=FALSE}
+The difference between the original assignments (with 20% list) and my generated assignments (without 20% list) with regards to the proportion of private primary school students in prestige secondary schools is displayed in Graph 1 below:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(cdat) +
+  geom_bar(aes(x=list20_prestige, y=mean(Private)), stat="identity", fill="tomato")+
+  labs(x = "20% list",
+       y = "Private school students",
+       title = "Number of private school students in prestige schools")+
+  scale_x_continuous(breaks=c(0,1))+
+  theme_minimal()
+
+```
+
+*Graph 1 - This bar graph compares the number of students from private primary schools that are assigned to a prestige school with and without the 20% list in place. 1 represents the affirmative of the axis label, 0 represents the counterfactual.*
+
+The graph demonstrates that there is a slightly greater number of private school students assigned to prestige schools with the 20% list in effect (20% list = 1) compared to the instance where the 20% list is not used (20% list = 0). This gives merit to my hypothesis as it demonstrates an observable difference between the worlds where the 20% list exists and does not exist.
+
+Using the regression models outlined in the previous section, I will determine whether this difference is significant.
+
+###Primary Regression
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 library(stargazer)
 stargazer(lm(list20_prestige ~ Private + Composite,data = cdat),
-          type = "text",
+          type = "html",
           title = "Regression Results",
           dep.var.labels = "20% list in effect")
 ```
 
-## Empirical extensions
+According to this regression, when the 20% list is in effect, private school students have a 2.6% greater chance than non-private school students of being assigned to a prestige school. This effect is NOT significant at the p<0.05 level when students' composite SEA scores are controlled for. Therefore, I am not able to find a statistically significant relationship and fail to reject the null to my hypothesis. The evidence does not suggest that attending a private primary school increases the likelihood of being assigned to a prestige school.
 
-EXPLAIN!!! Heterogeneity
+### Empirical Extension Results
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 # top 10 female
 top10_f <- c(390,579,614,613,612,264,30,298,634,269)
 top10_f_dat <- cdat[cdat$Gender == "F" & (cdat$sec_20list %in% top10_f | cdat$sec_no20list %in% top10_f), ]
@@ -212,10 +240,15 @@ stargazer(a, b, c, d, e, f,
 
 ```
 
-Nothing significant. Likely too small of a sample. Schools take in anywhere from 0% - 20%. Looking for very small differences. Not surprised by findings
+Similar to the primary regression, these regression results show that when the 20% list in in effect, private primary school students are not more likely to attend a prestige school. This table in particular demonstrates that this lack of an effect holds for 3 different levels of prestige secondary schools and across sex.
+
+There are several factors that may explain why these regressions could not explain the difference noted in Graph 1. Firstly, it may be the case that prestige schools do not demonstrate preference for private school students. However, due to the fact that an effect was noted at the p\<0.1 level, it is possible that an effect exists but my study design does not have enough power due to a small sample size. Recall that prestige schools can choose 0%-20% of their incoming class and only 8% of students taking the SEA exam are private school students. This suggests that the effect I am looking for is likely incredibly small and may only be observable with a larger dataset (for example, results and assignments from other years aside from 2017).
 
 ## Discussion and Conclusion
 
-There are several limitations in this research design. For example, private school attendance is not the most effective proxy for wealth. Having more accurate wealth data such as family income would be useful for the internal validity of this study.
+This study has not yielded significant results. As explained above, it could be the case that my hypothesis is not based in reality or it could be the case that the study design is faulty and requires greater statistical power. Additionally, private school attendance is not the most effective proxy for wealth. Having more accurate wealth data such as family income would be useful for the internal and external validity of this study. Also, I am only using 2017 SEA data. Therefore, I am concerned about the external validity of my findings, particularly because the Concordat has been around since the 1960s. It is possible that my findings are unique to 2017 and is not representative of other years.
 
-As a robustness check, I could test the strength of the relationship between the 20% list and the proportion of private school students who get into their first-choice schools. First-choice schools are similar to prestige schools in the sense that they are representative of a family's preferences but they are more subjective. If results are similar, an argument can be made that the relationship is stronger.
+Future research should use a larger dataset and better measures of family wealth. Also, a qualitative component that gets at the heart of the 20% list decision making process could prove invaluable such as a thematic analysis of interviews with past and present principals who have created 20% lists for their institutions.
+
+It is my hope that I can add to the conversation about the Concordat and the 20% list in a meaningful, empirical way. If it turns out that the Concordat poses a threat to equity or perpetuates a system of elitism, I hope to be a voice of change. At the least, I hope that this study can demystify a currently opaque process.
+

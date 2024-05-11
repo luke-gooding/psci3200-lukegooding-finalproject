@@ -22,40 +22,6 @@ width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
 }
 
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-position: relative; left: -1em; text-align: right; vertical-align: baseline;
-border: none; display: inline-block;
--webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-padding: 0 4px; width: 4em;
-}
-pre.numberSource { margin-left: 3em; padding-left: 4px; }
-div.sourceCode
-{ }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-
 div.csl-bib-body { }
 div.csl-entry {
 clear: both;
@@ -4671,6 +4637,230 @@ vertical-align: -.125em;
     "search-label": "Search"
   }
 }</script>
+<script>$(document).ready(function(){
+    if (typeof $('[data-toggle="tooltip"]').tooltip === 'function') {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+    if ($('[data-toggle="popover"]').popover === 'function') {
+        $('[data-toggle="popover"]').popover();
+    }
+});
+</script>
+<style type="text/css">
+.lightable-minimal {
+border-collapse: separate;
+border-spacing: 16px 1px;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-minimal td {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal th {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal thead tr:last-child th {
+border-bottom: 2px solid #00000050;
+empty-cells: hide;
+}
+.lightable-minimal tbody tr:first-child td {
+padding-top: 0.5em;
+}
+.lightable-minimal.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-minimal.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic {
+border-top: 0.16em solid #111111;
+border-bottom: 0.16em solid #111111;
+width: 100%;
+margin-bottom: 10px;
+margin: 10px 5px;
+}
+.lightable-classic tfoot tr td {
+border: 0;
+}
+.lightable-classic tfoot tr:first-child td {
+border-top: 0.14em solid #111111;
+}
+.lightable-classic caption {
+color: #222222;
+}
+.lightable-classic td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic thead tr:last-child th {
+border-bottom: 0.10em solid #111111;
+}
+.lightable-classic.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic-2 {
+border-top: 3px double #111111;
+border-bottom: 3px double #111111;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-classic-2 tfoot tr td {
+border: 0;
+}
+.lightable-classic-2 tfoot tr:first-child td {
+border-top: 3px double #111111;
+}
+.lightable-classic-2 caption {
+color: #222222;
+}
+.lightable-classic-2 td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic-2 th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic-2 tbody tr:last-child td {
+border-bottom: 3px double #111111;
+}
+.lightable-classic-2 thead tr:last-child th {
+border-bottom: 1px solid #111111;
+}
+.lightable-classic-2.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic-2.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #EEE;
+border-collapse: collapse;
+margin-bottom: 10px;
+}
+.lightable-material tfoot tr td {
+border: 0;
+}
+.lightable-material tfoot tr:first-child td {
+border-top: 1px solid #EEE;
+}
+.lightable-material th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+}
+.lightable-material td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+border-top: 1px solid #eeeeee;
+}
+.lightable-material.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #ddd;
+}
+.lightable-material-dark {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #FFFFFF12;
+border-collapse: collapse;
+margin-bottom: 10px;
+background-color: #363640;
+}
+.lightable-material-dark tfoot tr td {
+border: 0;
+}
+.lightable-material-dark tfoot tr:first-child td {
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF60;
+}
+.lightable-material-dark td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF;
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark.lightable-hover tbody tr:hover {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody tr:nth-child(even) {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material-dark.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #FFFFFF12;
+}
+.lightable-paper {
+width: 100%;
+margin-bottom: 10px;
+color: #444;
+}
+.lightable-paper tfoot tr td {
+border: 0;
+}
+.lightable-paper tfoot tr:first-child td {
+border-top: 1px solid #00000020;
+}
+.lightable-paper thead tr:last-child th {
+color: #666;
+vertical-align: bottom;
+border-bottom: 1px solid #00000020;
+line-height: 1.15em;
+padding: 10px 5px;
+}
+.lightable-paper td {
+vertical-align: middle;
+border-bottom: 1px solid #00000010;
+line-height: 1.15em;
+padding: 7px 5px;
+}
+.lightable-paper.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-paper.lightable-striped tbody tr:nth-child(even) {
+background-color: #00000008;
+}
+.lightable-paper.lightable-striped tbody td {
+border: 0;
+}
+</style>
 
   <script>/*
  * Polyfill service v3.111.0
@@ -4867,8 +5057,10 @@ window.Quarto = {
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#regression-models" id="toc-regression-models" class="nav-link" data-scroll-target="#regression-models">Regression Models</a></li>
   </ul></li>
-  <li><a href="#findings" id="toc-findings" class="nav-link" data-scroll-target="#findings">Findings</a></li>
-  <li><a href="#empirical-extensions" id="toc-empirical-extensions" class="nav-link" data-scroll-target="#empirical-extensions">Empirical extensions</a></li>
+  <li><a href="#findings" id="toc-findings" class="nav-link" data-scroll-target="#findings">Findings</a>
+  <ul class="collapse">
+  <li><a href="#empirical-extension-results" id="toc-empirical-extension-results" class="nav-link" data-scroll-target="#empirical-extension-results">Empirical Extension Results</a></li>
+  </ul></li>
   <li><a href="#discussion-and-conclusion" id="toc-discussion-and-conclusion" class="nav-link" data-scroll-target="#discussion-and-conclusion">Discussion and Conclusion</a></li>
   </ul>
 </nav>
@@ -4921,13 +5113,18 @@ window.Quarto = {
 <p>Having a publicly funded school system requires the government to assign graduating Primary School students to Secondary Schools. I refer to this process of assignment as the transition process. First, students choose 4 secondary schools they want to attend and rank them. Then, they do the Secondary Entrance Assessment (SEA). Based on their performance on the exam, they are placed into one of their 4 choices using an assignment algorithm (Appendix). If they perform poorly, they will be assigned to a school near to where they live.</p>
 <p>However, according to the Concordat, denominational secondary schools have a special privilege:</p>
 <p><em>The Principals of Assisted Secondary Schools will make available a minimum of 80 per centum of the First Form entry places to those who, by passing the test, qualify on the results of the Common Entrance Examination for free secondary education…The Principals will be free to allocate up to 20 per centum, the remaining places as they see fit provided normally that the pass list of the Common Entrance Examination serves to provide the pupils. <span class="citation" data-cites="noauthor_policy_nodate">(<a href="#ref-noauthor_policy_nodate" role="doc-biblioref"><span>“Policy <span>Documents</span> – <span>Ministry</span> of <span>Education</span>”</span> n.d.</a>)</span></em></p>
-<p>This part of the Concordat, colloquially known as the ‘20% list’ is the subject of my research. Campbell refers to the Concordat as one of many colonial holdovers present in our education system <span class="citation" data-cites="london_educational_1997">(<a href="#ref-london_educational_1997" role="doc-biblioref">London 1997</a>)</span> that perpetuates elitism. Coloquially, we refer to elite secondary schools as ‘prestige schools’.</p>
+<p>This part of the Concordat, colloquially known as the ‘20% list’ is the subject of my research. Campbell <span class="citation" data-cites="campbell_endless_1997">Campbell (<a href="#ref-campbell_endless_1997" role="doc-biblioref">1997</a>)</span> refers to the Concordat as one of many colonial holdovers present in our education system that perpetuates elitism. Coloquially, we refer to elite secondary schools as ‘prestige schools’.</p>
 <p>‘Prestige schools’ are secondary schools that are considered high performing and are usually ranked first in students’ 4 choices. Some refer to these schools as ‘first choice schools’. To operationalize this term, I have devised a definition:</p>
 <p><em>If the number of students that chose a school as their first choice exceeds the capacity of that school, this school will be classified as a ‘prestige school’.</em></p>
 <p>I can then order schools based on cutoff scores (similar to the way the Assignment Algorithm works). For example, if 250 students choose school X but school X has a capacity of 100, then X will be considered a prestige school with a cutoff score equal to the score of the 100th best performing student. I believe my definition is suitable because I think ‘prestige’ as a construct is more about perception than reality. It is possible to develop a ranking system for secondary schools based on historical academic and extracurricular performance but for the purpose of my analysis, the aggregated perception of students and their parents is more meaningful, and this is proxied by their choices. These choices set up a system of demand and supply where some schools have a greater demand than others, creating ‘prestige’. It is not my goal to explain the underlying reason for this ‘prestige’ but rather to identify it and investigate a particular externality.</p>
 <p>These schools also tend to be government assisted schools with the 20% list privilege. It then begs the question how this 20% list is used today. Remember, these churches went from having control over 100% of their incoming students in a time when secondary education was expensive but in low demand to now only controlling 20% of their incoming students in a time when secondary education is free but in high demand.</p>
-<p>Unfortunately, there are not many studies identifying and focusing on ‘prestige schools’ in particular. C. Karibo Jackson, looked at a special subset of ‘selective schools’. He showed that attending schools with higher-achieving peers increases academic performance and that short-run increases in peer achievement improve outcomes only at high-achieving selective schools<span class="citation" data-cites="jackson_can_2013">(<a href="#ref-jackson_can_2013" role="doc-biblioref">Jackson 2013</a>)</span>.</p>
+<p>Unfortunately, there are not many studies identifying and focusing on ‘prestige schools’ in particular. Jackson <span class="citation" data-cites="jackson_can_2013">Jackson (<a href="#ref-jackson_can_2013" role="doc-biblioref">2013</a>)</span>, looked at a special subset of ‘selective schools’. He showed that attending schools with higher-achieving peers increases academic performance and that short-run increases in peer achievement improve outcomes only at high-achieving selective schools.</p>
 <p>A study conducted by the Inter-American Development Bank shows that there are no meaningful differences between the academic outcomes of government versus government assisted secondary schools between the ages of 10 and 15 in terms of dropout rates or examination performance at age 15 in Trinidad and Tobago <span class="citation" data-cites="beuermann_privately_2015">(<a href="#ref-beuermann_privately_2015" role="doc-biblioref">Beuermann, Jackson, and Sierra 2015</a>)</span>. This is despite the study also noting large differences in teacher and peer quality between school types. The research made no mention of ‘prestige schools’ which I theorize is an outlying subset of government assisted schools.</p>
+<p>This work is intended to inform citizens and policy makers about the mechanisms behind the 20% list. If there is evidence of inequity, whether from this study or others, parents, teachers and policy makers should mobilize to address this issue.</p>
+<p>As Lisle <span class="citation" data-cites="lisle_when_2009">Lisle et al. (<a href="#ref-lisle_when_2009" role="doc-biblioref">2009</a>)</span> stated: the future of policy on the use of secondary school entrance examinations lies not in further tinkering or experimentation without evidence, but in developing a robust ongoing monitoring and evaluation system to provide information on examination processes and outcomes.</p>
+<p>More broadly, the persistence of the SEA exam and similar 11-plus examinations is the subject of much research:</p>
+<p><em>One of the best established findings of educational research is that students’ social class and their attainment at school are linked. This is a worldwide phenomenon. Students from more prestigious social class backgrounds or higher-income families tend to obtain higher marks and examination grades, and are then more likely to stay on in any education system that celebrates qualifications over equity.</em> <span class="citation" data-cites="doi:10.1177/2158244018825171">(<a href="#ref-doi:10.1177/2158244018825171" role="doc-biblioref">Gorard and Siddiqui 2019</a>)</span></p>
+<p>Worldwide, 11-plus exams have been discredited from both a psychometric and philosophical point of view by education authorities committed to equality of opportunity and non-elitism <span class="citation" data-cites="mackenzie_elevenplus_1989">(<a href="#ref-mackenzie_elevenplus_1989" role="doc-biblioref">Mackenzie 1989</a>)</span>. MacKenzie <span class="citation" data-cites="mackenzie_elevenplus_1989">Mackenzie (<a href="#ref-mackenzie_elevenplus_1989" role="doc-biblioref">1989</a>)</span> posits that the system persists in Trinidad and Tobago as a necessary mechanism to resolve the incredible demand for prestige schools. It is only through the improvement of non-prestige schools and the change in attitude of citizens toward them can the conversation about removing SEA be possible. MacKenzie <span class="citation" data-cites="mackenzie_elevenplus_1989">Mackenzie (<a href="#ref-mackenzie_elevenplus_1989" role="doc-biblioref">1989</a>)</span> suggests that, in the short term, modifications to the SEA examination will go some way to mitigating its deleterious effects. That is what I hope to do with this research project.</p>
 <section id="theory-and-hypothesis" class="level3">
 <h3 class="anchored" data-anchor-id="theory-and-hypothesis">Theory and Hypothesis</h3>
 <p>The existence of ‘prestige schools’ has many effects on individuals navigating the transition process. Failure to get into a ‘prestige school’ can have negative emotional, social and psychological impact on students and hence the effort to avoid this failure would cause students to experience stress, anxiety and fear <span class="citation" data-cites="wreo31474">(<a href="#ref-wreo31474" role="doc-biblioref">Cunningham 2021</a>)</span>. Parents also often resort to investing in supplementary tutoring in preparation for the SEA exam <span class="citation" data-cites="barrow_supplementary_2012">(<a href="#ref-barrow_supplementary_2012" role="doc-biblioref">Barrow and Lochan 2012</a>)</span>.</p>
@@ -4939,7 +5136,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="empirical-extension">Empirical Extension</h3>
 <p>I will also test the strength of the relationship in question at different levels modelled after Jackson’s research <span class="citation" data-cites="jackson_can_2013">(<a href="#ref-jackson_can_2013" role="doc-biblioref">Jackson 2013</a>)</span>. He uses a different ordering system to rank schools by mean incoming SEA scores. He then makes 3 categories: 1 to 30, 30 through 90 and Above 90 and compares the effect at each level. While my ordering system uses cutoff scores, I can model his categorization to determine if there are different strengths of the relationship between the 20% list and the rate of private school student admissions at the 1 to 10, 11-20 and 21-30 levels.</p>
 <p>Ranking schools based on cutoff scores is a useful index for competitiveness of a school for two reasons. Firstly, in order for a school to have a cutoff score, there must be more students who choose the school as their first choice than there are spots available. Secondly, higher cutoff scores means higher performing, more competitive students.</p>
-<p>These regressions will aid in addressing heterogeneity in my research question. It is entirely plausible that attending a private primary school has varying effects depending on how competitive a school is.</p>
+<p>These regressions will aid in addressing heterogeneity in my research question. It is entirely plausible that attending a private primary school has varying effects depending on how competitive a school is. I will also separate the data into male and female students because cutoff scores are also gendered (see Table 2). This is so because schools are either all-male or all-female and those that are unisex have a set number of seats available for each gender.</p>
 </section>
 </section>
 <section id="research-design" class="level2">
@@ -4949,20 +5146,20 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="data">Data</h3>
 <div class="cell">
 <div class="cell-output-display">
-<div id="nmvtyhnmmp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#nmvtyhnmmp table {
+<div id="wdasvhpsqh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wdasvhpsqh table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#nmvtyhnmmp thead, #nmvtyhnmmp tbody, #nmvtyhnmmp tfoot, #nmvtyhnmmp tr, #nmvtyhnmmp td, #nmvtyhnmmp th {
+#wdasvhpsqh thead, #wdasvhpsqh tbody, #wdasvhpsqh tfoot, #wdasvhpsqh tr, #wdasvhpsqh td, #wdasvhpsqh th {
 border-style: none;
 }
-#nmvtyhnmmp p {
+#wdasvhpsqh p {
 margin: 0;
 padding: 0;
 }
-#nmvtyhnmmp .gt_table {
+#wdasvhpsqh .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -4987,11 +5184,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_caption {
+#wdasvhpsqh .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#nmvtyhnmmp .gt_title {
+#wdasvhpsqh .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -5002,7 +5199,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#nmvtyhnmmp .gt_subtitle {
+#wdasvhpsqh .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -5013,7 +5210,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#nmvtyhnmmp .gt_heading {
+#wdasvhpsqh .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -5024,12 +5221,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_bottom_border {
+#wdasvhpsqh .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_col_headings {
+#wdasvhpsqh .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -5043,7 +5240,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_col_heading {
+#wdasvhpsqh .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5062,7 +5259,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#nmvtyhnmmp .gt_column_spanner_outer {
+#wdasvhpsqh .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5073,13 +5270,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#nmvtyhnmmp .gt_column_spanner_outer:first-child {
+#wdasvhpsqh .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#nmvtyhnmmp .gt_column_spanner_outer:last-child {
+#wdasvhpsqh .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#nmvtyhnmmp .gt_column_spanner {
+#wdasvhpsqh .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -5090,10 +5287,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#nmvtyhnmmp .gt_spanner_row {
+#wdasvhpsqh .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#nmvtyhnmmp .gt_group_heading {
+#wdasvhpsqh .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5118,7 +5315,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#nmvtyhnmmp .gt_empty_group_heading {
+#wdasvhpsqh .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -5132,13 +5329,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#nmvtyhnmmp .gt_from_md > :first-child {
+#wdasvhpsqh .gt_from_md > :first-child {
 margin-top: 0;
 }
-#nmvtyhnmmp .gt_from_md > :last-child {
+#wdasvhpsqh .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#nmvtyhnmmp .gt_row {
+#wdasvhpsqh .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5156,7 +5353,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#nmvtyhnmmp .gt_stub {
+#wdasvhpsqh .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5168,7 +5365,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#nmvtyhnmmp .gt_stub_row_group {
+#wdasvhpsqh .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5181,13 +5378,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#nmvtyhnmmp .gt_row_group_first td {
+#wdasvhpsqh .gt_row_group_first td {
 border-top-width: 2px;
 }
-#nmvtyhnmmp .gt_row_group_first th {
+#wdasvhpsqh .gt_row_group_first th {
 border-top-width: 2px;
 }
-#nmvtyhnmmp .gt_summary_row {
+#wdasvhpsqh .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -5196,14 +5393,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#nmvtyhnmmp .gt_first_summary_row {
+#wdasvhpsqh .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_first_summary_row.thick {
+#wdasvhpsqh .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#nmvtyhnmmp .gt_last_summary_row {
+#wdasvhpsqh .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5212,7 +5409,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_grand_summary_row {
+#wdasvhpsqh .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -5221,7 +5418,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#nmvtyhnmmp .gt_first_grand_summary_row {
+#wdasvhpsqh .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5230,7 +5427,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_last_grand_summary_row_top {
+#wdasvhpsqh .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5239,10 +5436,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_striped {
+#wdasvhpsqh .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#nmvtyhnmmp .gt_table_body {
+#wdasvhpsqh .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -5250,7 +5447,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_footnotes {
+#wdasvhpsqh .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -5263,7 +5460,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_footnote {
+#wdasvhpsqh .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -5271,7 +5468,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#nmvtyhnmmp .gt_sourcenotes {
+#wdasvhpsqh .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -5284,57 +5481,57 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#nmvtyhnmmp .gt_sourcenote {
+#wdasvhpsqh .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#nmvtyhnmmp .gt_left {
+#wdasvhpsqh .gt_left {
 text-align: left;
 }
-#nmvtyhnmmp .gt_center {
+#wdasvhpsqh .gt_center {
 text-align: center;
 }
-#nmvtyhnmmp .gt_right {
+#wdasvhpsqh .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#nmvtyhnmmp .gt_font_normal {
+#wdasvhpsqh .gt_font_normal {
 font-weight: normal;
 }
-#nmvtyhnmmp .gt_font_bold {
+#wdasvhpsqh .gt_font_bold {
 font-weight: bold;
 }
-#nmvtyhnmmp .gt_font_italic {
+#wdasvhpsqh .gt_font_italic {
 font-style: italic;
 }
-#nmvtyhnmmp .gt_super {
+#wdasvhpsqh .gt_super {
 font-size: 65%;
 }
-#nmvtyhnmmp .gt_footnote_marks {
+#wdasvhpsqh .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#nmvtyhnmmp .gt_asterisk {
+#wdasvhpsqh .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#nmvtyhnmmp .gt_indent_1 {
+#wdasvhpsqh .gt_indent_1 {
 text-indent: 5px;
 }
-#nmvtyhnmmp .gt_indent_2 {
+#wdasvhpsqh .gt_indent_2 {
 text-indent: 10px;
 }
-#nmvtyhnmmp .gt_indent_3 {
+#wdasvhpsqh .gt_indent_3 {
 text-indent: 15px;
 }
-#nmvtyhnmmp .gt_indent_4 {
+#wdasvhpsqh .gt_indent_4 {
 text-indent: 20px;
 }
-#nmvtyhnmmp .gt_indent_5 {
+#wdasvhpsqh .gt_indent_5 {
 text-indent: 25px;
 }
 </style>
@@ -5461,29 +5658,24 @@ text-indent: 25px;
 </div>
 </div>
 </div>
-<p>I will also add columns that identify the types of schools, whether religious boards, the government or private institutions manage the school. This data will be scraped from Trinidad and Tobago’s Ministry of Education website that contains a list of all the schools in Trinidad and Tobago and their corresponding type <span class="citation" data-cites="noauthor_ministry_nodate">(<a href="#ref-noauthor_ministry_nodate" role="doc-biblioref"><span>“Ministry of <span>Education</span> – <span>MOE</span> <span>Access</span>: <span>Service</span>, <span>Systems</span> &amp; <span>Solutions</span>”</span> n.d.</a>)</span>. I then recreated the assignment algorithm (See Appendix) that places primary school students into secondary schools to generate a new dataset where students are placed into secondary schools without the use of the 20% list.</p>
-<p>In addition to this dataset, I will use another dataset from the Ministry of Education that contains cutoff scores for all secondary schools in 2017.</p>
+<p><em>Table 1: Original Dataset from the Catholic Education Board</em></p>
+<p>I will also add columns that identify the types of schools, whether religious boards, the government or private institutions manage the school. This data will be scraped from Trinidad and Tobago’s Ministry of Education website that contains a list of all the schools in Trinidad and Tobago and their corresponding type <span class="citation" data-cites="noauthor_ministry_nodate">(<a href="#ref-noauthor_ministry_nodate" role="doc-biblioref"><span>“Ministry of <span>Education</span> – <span>MOE</span> <span>Access</span>: <span>Service</span>, <span>Systems</span> &amp; <span>Solutions</span>”</span> n.d.</a>)</span>. I then recreated the assignment algorithm (See Appendix) that places primary school students into secondary schools to generate a new dataset where students are placed into secondary schools without the use of the 20% list. This new dataset can be seen in Table 2 below:</p>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cutoffs <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/cutoff_2017.xlsx&quot;</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(<span class="fu">data.frame</span>(<span class="fu">head</span>(cutoffs)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
-<div id="ixuxfwgecv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ixuxfwgecv table {
+<div id="dmyvzdghoy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dmyvzdghoy table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#ixuxfwgecv thead, #ixuxfwgecv tbody, #ixuxfwgecv tfoot, #ixuxfwgecv tr, #ixuxfwgecv td, #ixuxfwgecv th {
+#dmyvzdghoy thead, #dmyvzdghoy tbody, #dmyvzdghoy tfoot, #dmyvzdghoy tr, #dmyvzdghoy td, #dmyvzdghoy th {
 border-style: none;
 }
-#ixuxfwgecv p {
+#dmyvzdghoy p {
 margin: 0;
 padding: 0;
 }
-#ixuxfwgecv .gt_table {
+#dmyvzdghoy .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -5508,11 +5700,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_caption {
+#dmyvzdghoy .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#ixuxfwgecv .gt_title {
+#dmyvzdghoy .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -5523,7 +5715,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#ixuxfwgecv .gt_subtitle {
+#dmyvzdghoy .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -5534,7 +5726,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#ixuxfwgecv .gt_heading {
+#dmyvzdghoy .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -5545,12 +5737,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_bottom_border {
+#dmyvzdghoy .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_col_headings {
+#dmyvzdghoy .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -5564,7 +5756,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_col_heading {
+#dmyvzdghoy .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5583,7 +5775,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#ixuxfwgecv .gt_column_spanner_outer {
+#dmyvzdghoy .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5594,13 +5786,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#ixuxfwgecv .gt_column_spanner_outer:first-child {
+#dmyvzdghoy .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#ixuxfwgecv .gt_column_spanner_outer:last-child {
+#dmyvzdghoy .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#ixuxfwgecv .gt_column_spanner {
+#dmyvzdghoy .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -5611,10 +5803,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#ixuxfwgecv .gt_spanner_row {
+#dmyvzdghoy .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#ixuxfwgecv .gt_group_heading {
+#dmyvzdghoy .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5639,7 +5831,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#ixuxfwgecv .gt_empty_group_heading {
+#dmyvzdghoy .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -5653,13 +5845,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#ixuxfwgecv .gt_from_md > :first-child {
+#dmyvzdghoy .gt_from_md > :first-child {
 margin-top: 0;
 }
-#ixuxfwgecv .gt_from_md > :last-child {
+#dmyvzdghoy .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#ixuxfwgecv .gt_row {
+#dmyvzdghoy .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5677,7 +5869,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#ixuxfwgecv .gt_stub {
+#dmyvzdghoy .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5689,7 +5881,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#ixuxfwgecv .gt_stub_row_group {
+#dmyvzdghoy .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5702,13 +5894,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#ixuxfwgecv .gt_row_group_first td {
+#dmyvzdghoy .gt_row_group_first td {
 border-top-width: 2px;
 }
-#ixuxfwgecv .gt_row_group_first th {
+#dmyvzdghoy .gt_row_group_first th {
 border-top-width: 2px;
 }
-#ixuxfwgecv .gt_summary_row {
+#dmyvzdghoy .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -5717,14 +5909,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#ixuxfwgecv .gt_first_summary_row {
+#dmyvzdghoy .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_first_summary_row.thick {
+#dmyvzdghoy .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#ixuxfwgecv .gt_last_summary_row {
+#dmyvzdghoy .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5733,7 +5925,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_grand_summary_row {
+#dmyvzdghoy .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -5742,7 +5934,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#ixuxfwgecv .gt_first_grand_summary_row {
+#dmyvzdghoy .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5751,7 +5943,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_last_grand_summary_row_top {
+#dmyvzdghoy .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5760,10 +5952,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_striped {
+#dmyvzdghoy .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#ixuxfwgecv .gt_table_body {
+#dmyvzdghoy .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -5771,7 +5963,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_footnotes {
+#dmyvzdghoy .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -5784,7 +5976,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_footnote {
+#dmyvzdghoy .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -5792,7 +5984,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#ixuxfwgecv .gt_sourcenotes {
+#dmyvzdghoy .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -5805,57 +5997,866 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#ixuxfwgecv .gt_sourcenote {
+#dmyvzdghoy .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#ixuxfwgecv .gt_left {
+#dmyvzdghoy .gt_left {
 text-align: left;
 }
-#ixuxfwgecv .gt_center {
+#dmyvzdghoy .gt_center {
 text-align: center;
 }
-#ixuxfwgecv .gt_right {
+#dmyvzdghoy .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#ixuxfwgecv .gt_font_normal {
+#dmyvzdghoy .gt_font_normal {
 font-weight: normal;
 }
-#ixuxfwgecv .gt_font_bold {
+#dmyvzdghoy .gt_font_bold {
 font-weight: bold;
 }
-#ixuxfwgecv .gt_font_italic {
+#dmyvzdghoy .gt_font_italic {
 font-style: italic;
 }
-#ixuxfwgecv .gt_super {
+#dmyvzdghoy .gt_super {
 font-size: 65%;
 }
-#ixuxfwgecv .gt_footnote_marks {
+#dmyvzdghoy .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#ixuxfwgecv .gt_asterisk {
+#dmyvzdghoy .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#ixuxfwgecv .gt_indent_1 {
+#dmyvzdghoy .gt_indent_1 {
 text-indent: 5px;
 }
-#ixuxfwgecv .gt_indent_2 {
+#dmyvzdghoy .gt_indent_2 {
 text-indent: 10px;
 }
-#ixuxfwgecv .gt_indent_3 {
+#dmyvzdghoy .gt_indent_3 {
 text-indent: 15px;
 }
-#ixuxfwgecv .gt_indent_4 {
+#dmyvzdghoy .gt_indent_4 {
 text-indent: 20px;
 }
-#ixuxfwgecv .gt_indent_5 {
+#dmyvzdghoy .gt_indent_5 {
+text-indent: 25px;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="STUDENT PIN" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">STUDENT PIN</th>
+<th id="Gender" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Gender</th>
+<th id="Composite" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Composite</th>
+<th id="1st" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">1st</th>
+<th id="2nd" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">2nd</th>
+<th id="3rd" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">3rd</th>
+<th id="4th" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">4th</th>
+<th id="Gov_vs_denom" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Gov_vs_denom</th>
+<th id="sec_20list" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">sec_20list</th>
+<th id="sec_no20list" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">sec_no20list</th>
+<th id="list20_prestige" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">list20_prestige</th>
+<th id="KPA" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">KPA</th>
+<th id="Anglican" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Anglican</th>
+<th id="NA" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">NA</th>
+<th id="Government" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Government</th>
+<th id="Hindu" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Hindu</th>
+<th id="TIA" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">TIA</th>
+<th id="RC" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">RC</th>
+<th id="Presbyterian" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Presbyterian</th>
+<th id="SDA" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">SDA</th>
+<th id="Private" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Private</th>
+<th id="Vedic" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Vedic</th>
+<th id="ASJA" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ASJA</th>
+<th id="Home" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Home</th>
+<th id="Special" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Special</th>
+<th id="Methodist" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Methodist</th>
+<th id="Baptist" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Baptist</th>
+<th id="Moravian" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Moravian</th>
+<th id="TML" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">TML</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="STUDENT PIN">0633278231</td>
+<td class="gt_row gt_left" headers="Gender">F</td>
+<td class="gt_row gt_right" headers="Composite">235.096</td>
+<td class="gt_row gt_right" headers="1st">390</td>
+<td class="gt_row gt_right" headers="2nd">265</td>
+<td class="gt_row gt_right" headers="3rd">276</td>
+<td class="gt_row gt_right" headers="4th">419</td>
+<td class="gt_row gt_left" headers="Gov_vs_denom">Denominational</td>
+<td class="gt_row gt_right" headers="sec_20list">265</td>
+<td class="gt_row gt_right" headers="sec_no20list">NA</td>
+<td class="gt_row gt_right" headers="list20_prestige">1</td>
+<td class="gt_row gt_right" headers="KPA">0</td>
+<td class="gt_row gt_right" headers="Anglican">0</td>
+<td class="gt_row gt_right" headers="NA">0</td>
+<td class="gt_row gt_right" headers="Government">0</td>
+<td class="gt_row gt_right" headers="Hindu">1</td>
+<td class="gt_row gt_right" headers="TIA">0</td>
+<td class="gt_row gt_right" headers="RC">0</td>
+<td class="gt_row gt_right" headers="Presbyterian">0</td>
+<td class="gt_row gt_right" headers="SDA">0</td>
+<td class="gt_row gt_right" headers="Private">0</td>
+<td class="gt_row gt_right" headers="Vedic">0</td>
+<td class="gt_row gt_right" headers="ASJA">0</td>
+<td class="gt_row gt_right" headers="Home">0</td>
+<td class="gt_row gt_right" headers="Special">0</td>
+<td class="gt_row gt_right" headers="Methodist">0</td>
+<td class="gt_row gt_right" headers="Baptist">0</td>
+<td class="gt_row gt_right" headers="Moravian">0</td>
+<td class="gt_row gt_right" headers="TML">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STUDENT PIN">6457440663</td>
+<td class="gt_row gt_left" headers="Gender">M</td>
+<td class="gt_row gt_right" headers="Composite">222.657</td>
+<td class="gt_row gt_right" headers="1st">102</td>
+<td class="gt_row gt_right" headers="2nd">51</td>
+<td class="gt_row gt_right" headers="3rd">706</td>
+<td class="gt_row gt_right" headers="4th">603</td>
+<td class="gt_row gt_left" headers="Gov_vs_denom">Denominational</td>
+<td class="gt_row gt_right" headers="sec_20list">102</td>
+<td class="gt_row gt_right" headers="sec_no20list">NA</td>
+<td class="gt_row gt_right" headers="list20_prestige">1</td>
+<td class="gt_row gt_right" headers="KPA">0</td>
+<td class="gt_row gt_right" headers="Anglican">1</td>
+<td class="gt_row gt_right" headers="NA">0</td>
+<td class="gt_row gt_right" headers="Government">0</td>
+<td class="gt_row gt_right" headers="Hindu">0</td>
+<td class="gt_row gt_right" headers="TIA">0</td>
+<td class="gt_row gt_right" headers="RC">0</td>
+<td class="gt_row gt_right" headers="Presbyterian">0</td>
+<td class="gt_row gt_right" headers="SDA">0</td>
+<td class="gt_row gt_right" headers="Private">0</td>
+<td class="gt_row gt_right" headers="Vedic">0</td>
+<td class="gt_row gt_right" headers="ASJA">0</td>
+<td class="gt_row gt_right" headers="Home">0</td>
+<td class="gt_row gt_right" headers="Special">0</td>
+<td class="gt_row gt_right" headers="Methodist">0</td>
+<td class="gt_row gt_right" headers="Baptist">0</td>
+<td class="gt_row gt_right" headers="Moravian">0</td>
+<td class="gt_row gt_right" headers="TML">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STUDENT PIN">0448369312</td>
+<td class="gt_row gt_left" headers="Gender">F</td>
+<td class="gt_row gt_right" headers="Composite">224.961</td>
+<td class="gt_row gt_right" headers="1st">614</td>
+<td class="gt_row gt_right" headers="2nd">634</td>
+<td class="gt_row gt_right" headers="3rd">141</td>
+<td class="gt_row gt_right" headers="4th">651</td>
+<td class="gt_row gt_left" headers="Gov_vs_denom">Denominational</td>
+<td class="gt_row gt_right" headers="sec_20list">614</td>
+<td class="gt_row gt_right" headers="sec_no20list">NA</td>
+<td class="gt_row gt_right" headers="list20_prestige">1</td>
+<td class="gt_row gt_right" headers="KPA">0</td>
+<td class="gt_row gt_right" headers="Anglican">0</td>
+<td class="gt_row gt_right" headers="NA">0</td>
+<td class="gt_row gt_right" headers="Government">0</td>
+<td class="gt_row gt_right" headers="Hindu">1</td>
+<td class="gt_row gt_right" headers="TIA">0</td>
+<td class="gt_row gt_right" headers="RC">0</td>
+<td class="gt_row gt_right" headers="Presbyterian">0</td>
+<td class="gt_row gt_right" headers="SDA">0</td>
+<td class="gt_row gt_right" headers="Private">0</td>
+<td class="gt_row gt_right" headers="Vedic">0</td>
+<td class="gt_row gt_right" headers="ASJA">0</td>
+<td class="gt_row gt_right" headers="Home">0</td>
+<td class="gt_row gt_right" headers="Special">0</td>
+<td class="gt_row gt_right" headers="Methodist">0</td>
+<td class="gt_row gt_right" headers="Baptist">0</td>
+<td class="gt_row gt_right" headers="Moravian">0</td>
+<td class="gt_row gt_right" headers="TML">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STUDENT PIN">F000004175</td>
+<td class="gt_row gt_left" headers="Gender">M</td>
+<td class="gt_row gt_right" headers="Composite">245.609</td>
+<td class="gt_row gt_right" headers="1st">260</td>
+<td class="gt_row gt_right" headers="2nd">692</td>
+<td class="gt_row gt_right" headers="3rd">668</td>
+<td class="gt_row gt_right" headers="4th">678</td>
+<td class="gt_row gt_left" headers="Gov_vs_denom">Denominational</td>
+<td class="gt_row gt_right" headers="sec_20list">260</td>
+<td class="gt_row gt_right" headers="sec_no20list">NA</td>
+<td class="gt_row gt_right" headers="list20_prestige">1</td>
+<td class="gt_row gt_right" headers="KPA">0</td>
+<td class="gt_row gt_right" headers="Anglican">0</td>
+<td class="gt_row gt_right" headers="NA">0</td>
+<td class="gt_row gt_right" headers="Government">0</td>
+<td class="gt_row gt_right" headers="Hindu">1</td>
+<td class="gt_row gt_right" headers="TIA">0</td>
+<td class="gt_row gt_right" headers="RC">0</td>
+<td class="gt_row gt_right" headers="Presbyterian">0</td>
+<td class="gt_row gt_right" headers="SDA">0</td>
+<td class="gt_row gt_right" headers="Private">0</td>
+<td class="gt_row gt_right" headers="Vedic">0</td>
+<td class="gt_row gt_right" headers="ASJA">0</td>
+<td class="gt_row gt_right" headers="Home">0</td>
+<td class="gt_row gt_right" headers="Special">0</td>
+<td class="gt_row gt_right" headers="Methodist">0</td>
+<td class="gt_row gt_right" headers="Baptist">0</td>
+<td class="gt_row gt_right" headers="Moravian">0</td>
+<td class="gt_row gt_right" headers="TML">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STUDENT PIN">8246369642</td>
+<td class="gt_row gt_left" headers="Gender">F</td>
+<td class="gt_row gt_right" headers="Composite">221.828</td>
+<td class="gt_row gt_right" headers="1st">264</td>
+<td class="gt_row gt_right" headers="2nd">138</td>
+<td class="gt_row gt_right" headers="3rd">540</td>
+<td class="gt_row gt_right" headers="4th">29</td>
+<td class="gt_row gt_left" headers="Gov_vs_denom">Government</td>
+<td class="gt_row gt_right" headers="sec_20list">NA</td>
+<td class="gt_row gt_right" headers="sec_no20list">540</td>
+<td class="gt_row gt_right" headers="list20_prestige">0</td>
+<td class="gt_row gt_right" headers="KPA">0</td>
+<td class="gt_row gt_right" headers="Anglican">0</td>
+<td class="gt_row gt_right" headers="NA">0</td>
+<td class="gt_row gt_right" headers="Government">1</td>
+<td class="gt_row gt_right" headers="Hindu">0</td>
+<td class="gt_row gt_right" headers="TIA">0</td>
+<td class="gt_row gt_right" headers="RC">0</td>
+<td class="gt_row gt_right" headers="Presbyterian">0</td>
+<td class="gt_row gt_right" headers="SDA">0</td>
+<td class="gt_row gt_right" headers="Private">0</td>
+<td class="gt_row gt_right" headers="Vedic">0</td>
+<td class="gt_row gt_right" headers="ASJA">0</td>
+<td class="gt_row gt_right" headers="Home">0</td>
+<td class="gt_row gt_right" headers="Special">0</td>
+<td class="gt_row gt_right" headers="Methodist">0</td>
+<td class="gt_row gt_right" headers="Baptist">0</td>
+<td class="gt_row gt_right" headers="Moravian">0</td>
+<td class="gt_row gt_right" headers="TML">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STUDENT PIN">5537289831</td>
+<td class="gt_row gt_left" headers="Gender">F</td>
+<td class="gt_row gt_right" headers="Composite">233.955</td>
+<td class="gt_row gt_right" headers="1st">614</td>
+<td class="gt_row gt_right" headers="2nd">30</td>
+<td class="gt_row gt_right" headers="3rd">504</td>
+<td class="gt_row gt_right" headers="4th">408</td>
+<td class="gt_row gt_left" headers="Gov_vs_denom">Denominational</td>
+<td class="gt_row gt_right" headers="sec_20list">614</td>
+<td class="gt_row gt_right" headers="sec_no20list">NA</td>
+<td class="gt_row gt_right" headers="list20_prestige">1</td>
+<td class="gt_row gt_right" headers="KPA">0</td>
+<td class="gt_row gt_right" headers="Anglican">0</td>
+<td class="gt_row gt_right" headers="NA">0</td>
+<td class="gt_row gt_right" headers="Government">0</td>
+<td class="gt_row gt_right" headers="Hindu">0</td>
+<td class="gt_row gt_right" headers="TIA">0</td>
+<td class="gt_row gt_right" headers="RC">1</td>
+<td class="gt_row gt_right" headers="Presbyterian">0</td>
+<td class="gt_row gt_right" headers="SDA">0</td>
+<td class="gt_row gt_right" headers="Private">0</td>
+<td class="gt_row gt_right" headers="Vedic">0</td>
+<td class="gt_row gt_right" headers="ASJA">0</td>
+<td class="gt_row gt_right" headers="Home">0</td>
+<td class="gt_row gt_right" headers="Special">0</td>
+<td class="gt_row gt_right" headers="Methodist">0</td>
+<td class="gt_row gt_right" headers="Baptist">0</td>
+<td class="gt_row gt_right" headers="Moravian">0</td>
+<td class="gt_row gt_right" headers="TML">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STUDENT PIN">6369591114</td>
+<td class="gt_row gt_left" headers="Gender">M</td>
+<td class="gt_row gt_right" headers="Composite">238.363</td>
+<td class="gt_row gt_right" headers="1st">213</td>
+<td class="gt_row gt_right" headers="2nd">470</td>
+<td class="gt_row gt_right" headers="3rd">669</td>
+<td class="gt_row gt_right" headers="4th">578</td>
+<td class="gt_row gt_left" headers="Gov_vs_denom">Private</td>
+<td class="gt_row gt_right" headers="sec_20list">213</td>
+<td class="gt_row gt_right" headers="sec_no20list">NA</td>
+<td class="gt_row gt_right" headers="list20_prestige">1</td>
+<td class="gt_row gt_right" headers="KPA">0</td>
+<td class="gt_row gt_right" headers="Anglican">0</td>
+<td class="gt_row gt_right" headers="NA">0</td>
+<td class="gt_row gt_right" headers="Government">0</td>
+<td class="gt_row gt_right" headers="Hindu">0</td>
+<td class="gt_row gt_right" headers="TIA">0</td>
+<td class="gt_row gt_right" headers="RC">0</td>
+<td class="gt_row gt_right" headers="Presbyterian">0</td>
+<td class="gt_row gt_right" headers="SDA">0</td>
+<td class="gt_row gt_right" headers="Private">1</td>
+<td class="gt_row gt_right" headers="Vedic">0</td>
+<td class="gt_row gt_right" headers="ASJA">0</td>
+<td class="gt_row gt_right" headers="Home">0</td>
+<td class="gt_row gt_right" headers="Special">0</td>
+<td class="gt_row gt_right" headers="Methodist">0</td>
+<td class="gt_row gt_right" headers="Baptist">0</td>
+<td class="gt_row gt_right" headers="Moravian">0</td>
+<td class="gt_row gt_right" headers="TML">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STUDENT PIN">1027176050</td>
+<td class="gt_row gt_left" headers="Gender">M</td>
+<td class="gt_row gt_right" headers="Composite">232.075</td>
+<td class="gt_row gt_right" headers="1st">389</td>
+<td class="gt_row gt_right" headers="2nd">457</td>
+<td class="gt_row gt_right" headers="3rd">27</td>
+<td class="gt_row gt_right" headers="4th">504</td>
+<td class="gt_row gt_left" headers="Gov_vs_denom">Denominational</td>
+<td class="gt_row gt_right" headers="sec_20list">27</td>
+<td class="gt_row gt_right" headers="sec_no20list">NA</td>
+<td class="gt_row gt_right" headers="list20_prestige">1</td>
+<td class="gt_row gt_right" headers="KPA">0</td>
+<td class="gt_row gt_right" headers="Anglican">0</td>
+<td class="gt_row gt_right" headers="NA">0</td>
+<td class="gt_row gt_right" headers="Government">0</td>
+<td class="gt_row gt_right" headers="Hindu">0</td>
+<td class="gt_row gt_right" headers="TIA">0</td>
+<td class="gt_row gt_right" headers="RC">0</td>
+<td class="gt_row gt_right" headers="Presbyterian">1</td>
+<td class="gt_row gt_right" headers="SDA">0</td>
+<td class="gt_row gt_right" headers="Private">0</td>
+<td class="gt_row gt_right" headers="Vedic">0</td>
+<td class="gt_row gt_right" headers="ASJA">0</td>
+<td class="gt_row gt_right" headers="Home">0</td>
+<td class="gt_row gt_right" headers="Special">0</td>
+<td class="gt_row gt_right" headers="Methodist">0</td>
+<td class="gt_row gt_right" headers="Baptist">0</td>
+<td class="gt_row gt_right" headers="Moravian">0</td>
+<td class="gt_row gt_right" headers="TML">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STUDENT PIN">7624177600</td>
+<td class="gt_row gt_left" headers="Gender">M</td>
+<td class="gt_row gt_right" headers="Composite">214.189</td>
+<td class="gt_row gt_right" headers="1st">634</td>
+<td class="gt_row gt_right" headers="2nd">548</td>
+<td class="gt_row gt_right" headers="3rd">46</td>
+<td class="gt_row gt_right" headers="4th">43</td>
+<td class="gt_row gt_left" headers="Gov_vs_denom">Denominational</td>
+<td class="gt_row gt_right" headers="sec_20list">NA</td>
+<td class="gt_row gt_right" headers="sec_no20list">548</td>
+<td class="gt_row gt_right" headers="list20_prestige">0</td>
+<td class="gt_row gt_right" headers="KPA">0</td>
+<td class="gt_row gt_right" headers="Anglican">0</td>
+<td class="gt_row gt_right" headers="NA">0</td>
+<td class="gt_row gt_right" headers="Government">0</td>
+<td class="gt_row gt_right" headers="Hindu">0</td>
+<td class="gt_row gt_right" headers="TIA">0</td>
+<td class="gt_row gt_right" headers="RC">0</td>
+<td class="gt_row gt_right" headers="Presbyterian">1</td>
+<td class="gt_row gt_right" headers="SDA">0</td>
+<td class="gt_row gt_right" headers="Private">0</td>
+<td class="gt_row gt_right" headers="Vedic">0</td>
+<td class="gt_row gt_right" headers="ASJA">0</td>
+<td class="gt_row gt_right" headers="Home">0</td>
+<td class="gt_row gt_right" headers="Special">0</td>
+<td class="gt_row gt_right" headers="Methodist">0</td>
+<td class="gt_row gt_right" headers="Baptist">0</td>
+<td class="gt_row gt_right" headers="Moravian">0</td>
+<td class="gt_row gt_right" headers="TML">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STUDENT PIN">9155480963</td>
+<td class="gt_row gt_left" headers="Gender">F</td>
+<td class="gt_row gt_right" headers="Composite">229.589</td>
+<td class="gt_row gt_right" headers="1st">678</td>
+<td class="gt_row gt_right" headers="2nd">190</td>
+<td class="gt_row gt_right" headers="3rd">580</td>
+<td class="gt_row gt_right" headers="4th">588</td>
+<td class="gt_row gt_left" headers="Gov_vs_denom">Denominational</td>
+<td class="gt_row gt_right" headers="sec_20list">NA</td>
+<td class="gt_row gt_right" headers="sec_no20list">678</td>
+<td class="gt_row gt_right" headers="list20_prestige">0</td>
+<td class="gt_row gt_right" headers="KPA">0</td>
+<td class="gt_row gt_right" headers="Anglican">1</td>
+<td class="gt_row gt_right" headers="NA">0</td>
+<td class="gt_row gt_right" headers="Government">0</td>
+<td class="gt_row gt_right" headers="Hindu">0</td>
+<td class="gt_row gt_right" headers="TIA">0</td>
+<td class="gt_row gt_right" headers="RC">0</td>
+<td class="gt_row gt_right" headers="Presbyterian">0</td>
+<td class="gt_row gt_right" headers="SDA">0</td>
+<td class="gt_row gt_right" headers="Private">0</td>
+<td class="gt_row gt_right" headers="Vedic">0</td>
+<td class="gt_row gt_right" headers="ASJA">0</td>
+<td class="gt_row gt_right" headers="Home">0</td>
+<td class="gt_row gt_right" headers="Special">0</td>
+<td class="gt_row gt_right" headers="Methodist">0</td>
+<td class="gt_row gt_right" headers="Baptist">0</td>
+<td class="gt_row gt_right" headers="Moravian">0</td>
+<td class="gt_row gt_right" headers="TML">0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><em>Table 2: 10 random rows from dataset</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Summary Statistics</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Variable</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">N</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Mean</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Std. Dev.</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Min</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pctl. 25</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pctl. 75</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Private</td>
+<td style="text-align: left;">11297</td>
+<td style="text-align: left;">0.13</td>
+<td style="text-align: left;">0.34</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sec_20list</td>
+<td style="text-align: left;">5764</td>
+<td style="text-align: left;">395</td>
+<td style="text-align: left;">216</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">230</td>
+<td style="text-align: left;">595</td>
+<td style="text-align: left;">730</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sec_no20list</td>
+<td style="text-align: left;">5533</td>
+<td style="text-align: left;">388</td>
+<td style="text-align: left;">217</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">230</td>
+<td style="text-align: left;">595</td>
+<td style="text-align: left;">730</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Composite</td>
+<td style="text-align: left;">11297</td>
+<td style="text-align: left;">227</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">129</td>
+<td style="text-align: left;">222</td>
+<td style="text-align: left;">235</td>
+<td style="text-align: left;">249</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p><em>Table 3: Summary table of variables of interest</em></p>
+<p>In addition to this dataset, I will use another dataset from the Ministry of Education that contains cutoff scores for all secondary schools in 2017.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="hlvamgzytc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hlvamgzytc table {
+font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+#hlvamgzytc thead, #hlvamgzytc tbody, #hlvamgzytc tfoot, #hlvamgzytc tr, #hlvamgzytc td, #hlvamgzytc th {
+border-style: none;
+}
+#hlvamgzytc p {
+margin: 0;
+padding: 0;
+}
+#hlvamgzytc .gt_table {
+display: table;
+border-collapse: collapse;
+line-height: normal;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}
+#hlvamgzytc .gt_caption {
+padding-top: 4px;
+padding-bottom: 4px;
+}
+#hlvamgzytc .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}
+#hlvamgzytc .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 3px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}
+#hlvamgzytc .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#hlvamgzytc .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#hlvamgzytc .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#hlvamgzytc .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}
+#hlvamgzytc .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}
+#hlvamgzytc .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}
+#hlvamgzytc .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}
+#hlvamgzytc .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}
+#hlvamgzytc .gt_spanner_row {
+border-bottom-style: hidden;
+}
+#hlvamgzytc .gt_group_heading {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+text-align: left;
+}
+#hlvamgzytc .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}
+#hlvamgzytc .gt_from_md > :first-child {
+margin-top: 0;
+}
+#hlvamgzytc .gt_from_md > :last-child {
+margin-bottom: 0;
+}
+#hlvamgzytc .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}
+#hlvamgzytc .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+}
+#hlvamgzytc .gt_stub_row_group {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+vertical-align: top;
+}
+#hlvamgzytc .gt_row_group_first td {
+border-top-width: 2px;
+}
+#hlvamgzytc .gt_row_group_first th {
+border-top-width: 2px;
+}
+#hlvamgzytc .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#hlvamgzytc .gt_first_summary_row {
+border-top-style: solid;
+border-top-color: #D3D3D3;
+}
+#hlvamgzytc .gt_first_summary_row.thick {
+border-top-width: 2px;
+}
+#hlvamgzytc .gt_last_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#hlvamgzytc .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#hlvamgzytc .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}
+#hlvamgzytc .gt_last_grand_summary_row_top {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: double;
+border-bottom-width: 6px;
+border-bottom-color: #D3D3D3;
+}
+#hlvamgzytc .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}
+#hlvamgzytc .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#hlvamgzytc .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#hlvamgzytc .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#hlvamgzytc .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#hlvamgzytc .gt_sourcenote {
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#hlvamgzytc .gt_left {
+text-align: left;
+}
+#hlvamgzytc .gt_center {
+text-align: center;
+}
+#hlvamgzytc .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}
+#hlvamgzytc .gt_font_normal {
+font-weight: normal;
+}
+#hlvamgzytc .gt_font_bold {
+font-weight: bold;
+}
+#hlvamgzytc .gt_font_italic {
+font-style: italic;
+}
+#hlvamgzytc .gt_super {
+font-size: 65%;
+}
+#hlvamgzytc .gt_footnote_marks {
+font-size: 75%;
+vertical-align: 0.4em;
+position: initial;
+}
+#hlvamgzytc .gt_asterisk {
+font-size: 100%;
+vertical-align: 0;
+}
+#hlvamgzytc .gt_indent_1 {
+text-indent: 5px;
+}
+#hlvamgzytc .gt_indent_2 {
+text-indent: 10px;
+}
+#hlvamgzytc .gt_indent_3 {
+text-indent: 15px;
+}
+#hlvamgzytc .gt_indent_4 {
+text-indent: 20px;
+}
+#hlvamgzytc .gt_indent_5 {
 text-indent: 25px;
 }
 </style>
@@ -5912,23 +6913,12 @@ text-indent: 25px;
 </div>
 </div>
 </div>
-<p>The difference between the original assignments (with 20% list) and my generated assignments (without 20% list) with regards to the proportion of private primary school students in prestige secondary schools is displayed in Graph 1 below:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="data:image/png;base64,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" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><em>Graph 1 - This bar graph compares the number of students from private primary schools that are assigned to a prestige school with and without the 20% list in place. 1 represents the affirmative of the axis label, 0 represents the counterfactual.</em></p>
-<p>The graph demonstrates that there is a slightly greater number of private school students assigned to prestige schools with the 20% list in effect (20% list = 1) compared to the instance where the 20% list is not used (20% list = 0).</p>
+<p><em>Table 4: Cutoff Scores 2017</em></p>
 </section>
 <section id="regression-models" class="level3">
 <h3 class="anchored" data-anchor-id="regression-models">Regression Models</h3>
-<p>Using private primary school attendance as a proxy for family wealth, I will estimate the strength of the relationship between the 20% list and rate of admittance of students from wealthy families to ‘prestige’ secondary schools.</p>
-<p>I will estimate the effect with an Ordinary Least Squared (OLS) regression and a control for composite SEA scores (See Appendix for further discussion about controls).</p>
+<p>Using private primary school attendance as a proxy for family wealth, I will estimate the strength of the relationship between the 20% list and rate of admittance of students from wealthy families to ‘prestige’ secondary schools. I chose to include composite score as a control because it acts as a confounder in the sense that a higher composite grade increases the chance of being admitted to a prestige school. In order to isolate the effect of attending a private primary school, I intend to control for any factors that could be considered when selecting students for the 20% list such as a student’s composite score. While I did not identify any other variables from my data as cofounders (See Appendix), it is entirely possible that unobserved ones exist. For example, it is plausible that family connections and social network can influence can act as a confounder. Relationships with primary both primary and secondary school faculty can play an important role in which secondary school a student is assigned to. Also, family religion is an important factor in determining which primary school a student attends and it plays a role in the 20% list decision-making process.</p>
+<p>Therefore, the model I choose to investigate my hypothesis is an Ordinary Least Squared (OLS) regression with a control for composite SEA scores (See Appendix for further discussion about controls).</p>
 <p><span class="math display">\[ 20percentlist_{ij} =b_0 + b_1 (PrivPrestige_{ij}) + b_2(Composite_{ij}) +ε_i \]</span></p>
 <p><span class="math inline">\(20percentlist_{ij}\)</span>: Binary variable describing whether a student’s assignment to prestige school j came from the algorithm with the 20% list (1) or without the 20% list (0).</p>
 <p><span class="math inline">\(b_0\)</span>: Intercept</p>
@@ -5941,70 +6931,572 @@ text-indent: 25px;
 </section>
 <section id="findings" class="level2">
 <h2 class="anchored" data-anchor-id="findings">Findings</h2>
+<p>The difference between the original assignments (with 20% list) and my generated assignments (without 20% list) with regards to the proportion of private primary school students in prestige secondary schools is displayed in Graph 1 below:</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Regression Results
-===============================================
-                        Dependent variable:    
-                    ---------------------------
-                        20% list in effect     
------------------------------------------------
-Private                       0.026*           
-                              (0.014)          
-                                               
-Composite                    -0.001***         
-                             (0.0004)          
-                                               
-Constant                     0.773***          
-                              (0.094)          
-                                               
------------------------------------------------
-Observations                  11,297           
-R2                             0.001           
-Adjusted R2                    0.001           
-Residual Std. Error     0.500 (df = 11294)     
-F Statistic          5.140*** (df = 2; 11294)  
-===============================================
-Note:               *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01</code></pre>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="data:image/png;base64,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" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
+</div>
+<p><em>Graph 1 - This bar graph compares the number of students from private primary schools that are assigned to a prestige school with and without the 20% list in place. 1 represents the affirmative of the axis label, 0 represents the counterfactual.</em></p>
+<p>The graph demonstrates that there is a slightly greater number of private school students assigned to prestige schools with the 20% list in effect (20% list = 1) compared to the instance where the 20% list is not used (20% list = 0). This gives merit to my hypothesis as it demonstrates an observable difference between the worlds where the 20% list exists and does not exist.</p>
+<p>Using the regression models outlined in the previous section, I will determine whether this difference is significant.</p>
+<p>###Primary Regression</p>
+<table style="text-align:center">
+<caption>
+<strong>Regression Results</strong>
+</caption>
+<tbody><tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="1" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+20% list in effect
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Private
+</td>
+<td>
+0.026<sup>*</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.014)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Composite
+</td>
+<td>
+-0.001<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.0004)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+0.773<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.094)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+11,297
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+0.500 (df = 11294)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+5.140<sup>***</sup> (df = 2; 11294)
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+</tbody></table>
+<p>According to this regression, when the 20% list is in effect, private school students have a 2.6% greater chance than non-private school students of being assigned to a prestige school. This effect is NOT significant at the p&lt;0.05 level when students’ composite SEA scores are controlled for. Therefore, I am not able to find a statistically significant relationship and fail to reject the null to my hypothesis. The evidence does not suggest that attending a private primary school increases the likelihood of being assigned to a prestige school.</p>
+<section id="empirical-extension-results" class="level3">
+<h3 class="anchored" data-anchor-id="empirical-extension-results">Empirical Extension Results</h3>
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="7" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="6">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="6" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="6">
+Effect at different levels
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+Top 10 F
+</td>
+<td>
+Top 10 M
+</td>
+<td>
+11-20 F
+</td>
+<td>
+11-20 M
+</td>
+<td>
+21-30 F
+</td>
+<td>
+21-30 M
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+<td>
+(3)
+</td>
+<td>
+(4)
+</td>
+<td>
+(5)
+</td>
+<td>
+(6)
+</td>
+</tr>
+<tr>
+<td colspan="7" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Private
+</td>
+<td>
+0.032
+</td>
+<td>
+0.033
+</td>
+<td>
+0.049
+</td>
+<td>
+-0.014
+</td>
+<td>
+-0.045
+</td>
+<td>
+0.090
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.026)
+</td>
+<td>
+(0.028)
+</td>
+<td>
+(0.044)
+</td>
+<td>
+(0.039)
+</td>
+<td>
+(0.044)
+</td>
+<td>
+(0.058)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Composite
+</td>
+<td>
+-0.010<sup>***</sup>
+</td>
+<td>
+-0.008<sup>***</sup>
+</td>
+<td>
+-0.006<sup>***</sup>
+</td>
+<td>
+-0.004<sup>***</sup>
+</td>
+<td>
+0.005<sup>**</sup>
+</td>
+<td>
+0.004<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.002)
+</td>
+<td>
+(0.002)
+</td>
+<td>
+(0.002)
+</td>
+<td>
+(0.002)
+</td>
+<td>
+(0.002)
+</td>
+<td>
+(0.001)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+2.964<sup>***</sup>
+</td>
+<td>
+2.376<sup>***</sup>
+</td>
+<td>
+1.787<sup>***</sup>
+</td>
+<td>
+1.528<sup>***</sup>
+</td>
+<td>
+-0.708
+</td>
+<td>
+-0.306
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.399)
+</td>
+<td>
+(0.359)
+</td>
+<td>
+(0.367)
+</td>
+<td>
+(0.373)
+</td>
+<td>
+(0.544)
+</td>
+<td>
+(0.283)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="7" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+2,162
+</td>
+<td>
+1,858
+</td>
+<td>
+1,712
+</td>
+<td>
+1,456
+</td>
+<td>
+1,280
+</td>
+<td>
+1,184
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.019
+</td>
+<td>
+0.015
+</td>
+<td>
+0.008
+</td>
+<td>
+0.005
+</td>
+<td>
+0.005
+</td>
+<td>
+0.009
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.018
+</td>
+<td>
+0.014
+</td>
+<td>
+0.007
+</td>
+<td>
+0.004
+</td>
+<td>
+0.003
+</td>
+<td>
+0.007
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+0.496 (df = 2159)
+</td>
+<td>
+0.497 (df = 1855)
+</td>
+<td>
+0.498 (df = 1709)
+</td>
+<td>
+0.499 (df = 1453)
+</td>
+<td>
+0.499 (df = 1277)
+</td>
+<td>
+0.498 (df = 1181)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+20.512<sup>***</sup> (df = 2; 2159)
+</td>
+<td>
+14.403<sup>***</sup> (df = 2; 1855)
+</td>
+<td>
+6.671<sup>***</sup> (df = 2; 1709)
+</td>
+<td>
+3.797<sup>**</sup> (df = 2; 1453)
+</td>
+<td>
+2.967<sup>*</sup> (df = 2; 1277)
+</td>
+<td>
+5.371<sup>***</sup> (df = 2; 1181)
+</td>
+</tr>
+<tr>
+<td colspan="7" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="6" style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+</tbody></table>
+<p>Similar to the primary regression, these regression results show that when the 20% list in in effect, private primary school students are not more likely to attend a prestige school. This table in particular demonstrates that this lack of an effect holds for 3 different levels of prestige secondary schools and across sex.</p>
+<p>There are several factors that may explain why these regressions could not explain the difference noted in Graph 1. Firstly, it may be the case that prestige schools do not demonstrate preference for private school students. However, due to the fact that an effect was noted at the p&lt;0.1 level, it is possible that an effect exists but my study design does not have enough power due to a small sample size. Recall that prestige schools can choose 0%-20% of their incoming class and only 8% of students taking the SEA exam are private school students. This suggests that the effect I am looking for is likely incredibly small and may only be observable with a larger dataset (for example, results and assignments from other years aside from 2017).</p>
 </section>
-<section id="empirical-extensions" class="level2">
-<h2 class="anchored" data-anchor-id="empirical-extensions">Empirical extensions</h2>
-<p>EXPLAIN!!! Heterogeneity</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-&lt;table style=&quot;text-align:center&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot;&gt;&lt;em&gt;Dependent variable:&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot;&gt;Effect at different levels&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;Top 10 F&lt;/td&gt;&lt;td&gt;Top 10 M&lt;/td&gt;&lt;td&gt;11-20 F&lt;/td&gt;&lt;td&gt;11-20 M&lt;/td&gt;&lt;td&gt;21-30 F&lt;/td&gt;&lt;td&gt;21-30 M&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(1)&lt;/td&gt;&lt;td&gt;(2)&lt;/td&gt;&lt;td&gt;(3)&lt;/td&gt;&lt;td&gt;(4)&lt;/td&gt;&lt;td&gt;(5)&lt;/td&gt;&lt;td&gt;(6)&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Private&lt;/td&gt;&lt;td&gt;0.032&lt;/td&gt;&lt;td&gt;0.033&lt;/td&gt;&lt;td&gt;0.049&lt;/td&gt;&lt;td&gt;-0.014&lt;/td&gt;&lt;td&gt;-0.045&lt;/td&gt;&lt;td&gt;0.090&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(0.026)&lt;/td&gt;&lt;td&gt;(0.028)&lt;/td&gt;&lt;td&gt;(0.044)&lt;/td&gt;&lt;td&gt;(0.039)&lt;/td&gt;&lt;td&gt;(0.044)&lt;/td&gt;&lt;td&gt;(0.058)&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Composite&lt;/td&gt;&lt;td&gt;-0.010&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;-0.008&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;-0.006&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;-0.004&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;0.005&lt;sup&gt;**&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;0.004&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(0.002)&lt;/td&gt;&lt;td&gt;(0.002)&lt;/td&gt;&lt;td&gt;(0.002)&lt;/td&gt;&lt;td&gt;(0.002)&lt;/td&gt;&lt;td&gt;(0.002)&lt;/td&gt;&lt;td&gt;(0.001)&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Constant&lt;/td&gt;&lt;td&gt;2.964&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;2.376&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;1.787&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;1.528&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;-0.708&lt;/td&gt;&lt;td&gt;-0.306&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(0.399)&lt;/td&gt;&lt;td&gt;(0.359)&lt;/td&gt;&lt;td&gt;(0.367)&lt;/td&gt;&lt;td&gt;(0.373)&lt;/td&gt;&lt;td&gt;(0.544)&lt;/td&gt;&lt;td&gt;(0.283)&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Observations&lt;/td&gt;&lt;td&gt;2,162&lt;/td&gt;&lt;td&gt;1,858&lt;/td&gt;&lt;td&gt;1,712&lt;/td&gt;&lt;td&gt;1,456&lt;/td&gt;&lt;td&gt;1,280&lt;/td&gt;&lt;td&gt;1,184&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;0.019&lt;/td&gt;&lt;td&gt;0.015&lt;/td&gt;&lt;td&gt;0.008&lt;/td&gt;&lt;td&gt;0.005&lt;/td&gt;&lt;td&gt;0.005&lt;/td&gt;&lt;td&gt;0.009&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Adjusted R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;0.018&lt;/td&gt;&lt;td&gt;0.014&lt;/td&gt;&lt;td&gt;0.007&lt;/td&gt;&lt;td&gt;0.004&lt;/td&gt;&lt;td&gt;0.003&lt;/td&gt;&lt;td&gt;0.007&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Residual Std. Error&lt;/td&gt;&lt;td&gt;0.496 (df = 2159)&lt;/td&gt;&lt;td&gt;0.497 (df = 1855)&lt;/td&gt;&lt;td&gt;0.498 (df = 1709)&lt;/td&gt;&lt;td&gt;0.499 (df = 1453)&lt;/td&gt;&lt;td&gt;0.499 (df = 1277)&lt;/td&gt;&lt;td&gt;0.498 (df = 1181)&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;F Statistic&lt;/td&gt;&lt;td&gt;20.512&lt;sup&gt;***&lt;/sup&gt; (df = 2; 2159)&lt;/td&gt;&lt;td&gt;14.403&lt;sup&gt;***&lt;/sup&gt; (df = 2; 1855)&lt;/td&gt;&lt;td&gt;6.671&lt;sup&gt;***&lt;/sup&gt; (df = 2; 1709)&lt;/td&gt;&lt;td&gt;3.797&lt;sup&gt;**&lt;/sup&gt; (df = 2; 1453)&lt;/td&gt;&lt;td&gt;2.967&lt;sup&gt;*&lt;/sup&gt; (df = 2; 1277)&lt;/td&gt;&lt;td&gt;5.371&lt;sup&gt;***&lt;/sup&gt; (df = 2; 1181)&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/td&gt;&lt;td colspan=&quot;6&quot; style=&quot;text-align:right&quot;&gt;&lt;sup&gt;*&lt;/sup&gt;p&lt;0.1; &lt;sup&gt;**&lt;/sup&gt;p&lt;0.05; &lt;sup&gt;***&lt;/sup&gt;p&lt;0.01&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</code></pre>
-</div>
-</div>
-<p>Nothing significant. Likely too small of a sample. Schools take in anywhere from 0% - 20%. Looking for very small differences. Not surprised by findings</p>
 </section>
 <section id="discussion-and-conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="discussion-and-conclusion">Discussion and Conclusion</h2>
-<p>There are several limitations in this research design. For example, private school attendance is not the most effective proxy for wealth. Having more accurate wealth data such as family income would be useful for the internal validity of this study.</p>
-<p>As a robustness check, I could test the strength of the relationship between the 20% list and the proportion of private school students who get into their first-choice schools. First-choice schools are similar to prestige schools in the sense that they are representative of a family’s preferences but they are more subjective. If results are similar, an argument can be made that the relationship is stronger.</p>
+<p>This study has not yielded significant results. As explained above, it could be the case that my hypothesis is not based in reality or it could be the case that the study design is faulty and requires greater statistical power. Additionally, private school attendance is not the most effective proxy for wealth. Having more accurate wealth data such as family income would be useful for the internal and external validity of this study. Also, I am only using 2017 SEA data. Therefore, I am concerned about the external validity of my findings, particularly because the Concordat has been around since the 1960s. It is possible that my findings are unique to 2017 and is not representative of other years.</p>
+<p>Future research should use a larger dataset and better measures of family wealth. Also, a qualitative component that gets at the heart of the 20% list decision making process could prove invaluable such as a thematic analysis of interviews with past and present principals who have created 20% lists for their institutions.</p>
+<p>It is my hope that I can add to the conversation about the Concordat and the 20% list in a meaningful, empirical way. If it turns out that the Concordat poses a threat to equity or perpetuates a system of elitism, I hope to be a voice of change. At the least, I hope that this study can demystify a currently opaque process.</p>
 
 
 
@@ -6017,17 +7509,29 @@ Barrow, Dorian A., and Samuel N. Lochan. 2012. <span>“Supplementary Tutoring i
 <div id="ref-beuermann_privately_2015" class="csl-entry" role="listitem">
 Beuermann, Diether, C. Kirabo Jackson, and Ricardo Sierra. 2015. <span>“Privately <span>Managed</span> <span>Public</span> <span>Secondary</span> <span>Schools</span> and <span>Academic</span> <span>Achievement</span> in <span>Trinidad</span> and <span>Tobago</span>: <span>Evidence</span> from <span>Rule</span>-<span>Based</span> <span>Student</span> <span>Assignments</span>.”</span> <em>IDB Publications</em>, November. <a href="https://doi.org/10.18235/0000213">https://doi.org/10.18235/0000213</a>.
 </div>
+<div id="ref-campbell_endless_1997" class="csl-entry" role="listitem">
+Campbell, Carl C. 1997. <em>Endless Education: Main Currents in the Education System of Modern <span>Trinidad</span> and <span>Tobago</span>, 1939-1986</em>. Press University of the West Indies. <a href="https://www.proquest.com/docview/59777330?https://hdl.library.upenn.edu/1017/7000&amp;parentSessionId=5%2BUPMckGOQBzWuq2VpXfrvR5%2FinP7BGduxHJt%2B5Tjj0%3D&amp;pq-origsite=summon&amp;sourcetype=Books">https://www.proquest.com/docview/59777330?https://hdl.library.upenn.edu/1017/7000&amp;parentSessionId=5%2BUPMckGOQBzWuq2VpXfrvR5%2FinP7BGduxHJt%2B5Tjj0%3D&amp;pq-origsite=summon&amp;sourcetype=Books</a>.
+</div>
 <div id="ref-wreo31474" class="csl-entry" role="listitem">
 Cunningham, Victoria Maria. 2021. <span>“The Impact of High-Stakes Testing: The Experiences of Educators, Students, and Parents in Trinidad and Tobago.”</span> University of Sheffield. <a href="https://etheses.whiterose.ac.uk/31474/">https://etheses.whiterose.ac.uk/31474/</a>.
 </div>
 <div id="ref-noauthor_education_2021" class="csl-entry" role="listitem">
 <span>“Education <span>Statistics</span> - <span>Central</span> <span>Statistical</span> <span>Office</span>.”</span> 2021. <em>Https://Cso.gov.tt/</em>. <a href="https://cso.gov.tt/subjects/population-and-vital-statistics/education-statistics/">https://cso.gov.tt/subjects/population-and-vital-statistics/education-statistics/</a>.
 </div>
+<div id="ref-doi:10.1177/2158244018825171" class="csl-entry" role="listitem">
+Gorard, Stephen, and Nadia Siddiqui. 2019. <span>“How Trajectories of Disadvantage Help Explain School Attainment.”</span> <em>Sage Open</em> 9 (1): 2158244018825171. <a href="https://doi.org/10.1177/2158244018825171">https://doi.org/10.1177/2158244018825171</a>.
+</div>
 <div id="ref-jackson_can_2013" class="csl-entry" role="listitem">
 Jackson, C. Kirabo. 2013. <span>“Can Higher-Achieving Peers Explain the Benefits to Attending Selective Schools? <span>Evidence</span> from <span>Trinidad</span> and <span>Tobago</span>.”</span> <em>Journal of Public Economics</em> 108: 63–77. https://doi.org/<a href="https://doi.org/10.1016/j.jpubeco.2013.09.007">https://doi.org/10.1016/j.jpubeco.2013.09.007</a>.
 </div>
+<div id="ref-lisle_when_2009" class="csl-entry" role="listitem">
+Lisle, Jerome De, Carol Keller, Vena Jules, and Peter Smith. 2009. <span>“When <span>Choosing</span> <span>Might</span> <span>Mean</span> <span>Losing</span>: <span>A</span> <span>Mixed</span> <span>Method</span> <span>Study</span> of <span>Secondary</span> <span>School</span> Choice in the <span>Republic</span> of <span>Trinidad</span> and <span>Tobago</span>.”</span> <em>Caribbean Curriculum</em> 16 (1): 131–76. <a href="https://journals.sta.uwi.edu/ojs/index.php/cc/article/view/596">https://journals.sta.uwi.edu/ojs/index.php/cc/article/view/596</a>.
+</div>
 <div id="ref-london_educational_1997" class="csl-entry" role="listitem">
 London, Norrel A. 1997. <span>“Educational <span>Planning</span> and <span>Its</span> <span>Implementation</span> in <span>Trinidad</span> and <span>Tobago</span>.”</span> <em>Comparative Education Review</em> 41 (3): 314–30. <a href="https://www.jstor.org/stable/1188949">https://www.jstor.org/stable/1188949</a>.
+</div>
+<div id="ref-mackenzie_elevenplus_1989" class="csl-entry" role="listitem">
+Mackenzie, Clayton G. 1989. <span>“The <span>Eleven</span>‐plus <span>Examination</span> in <span>Developing</span> <span>Countries</span>: A Case Study.”</span> <em>Educational Studies</em> 15 (3): 281–300. <a href="https://doi.org/10.1080/0305569890150306">https://doi.org/10.1080/0305569890150306</a>.
 </div>
 <div id="ref-noauthor_ministry_nodate" class="csl-entry" role="listitem">
 <span>“Ministry of <span>Education</span> – <span>MOE</span> <span>Access</span>: <span>Service</span>, <span>Systems</span> &amp; <span>Solutions</span>.”</span> n.d. Accessed April 11, 2024. <a href="https://www.moe.gov.tt/">https://www.moe.gov.tt/</a>.
